@@ -1,0 +1,22 @@
+drupal/sites/default/local_settings.php
+drupal/sites/*/files
+drupal/sites/*/private
+drupal/sites/all/modules/imagemanager/logs
+drupal/sites/all/modules/filemanager/logs
+.buildpath
+.project
+.tmproj
+*.sublime-project
+*.sublime-workspace
+.settings
+db
+# drupal/sites/all/themes/boilerplate/config.rb
+*~
+compass_app_log.txt
+.sass-cache
+compiled
+# compass generated sprites
+*-s[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].png
+drupal/sites/all/themes/boilerplate/stylesheets
+.DS_Store
+*.sublime-*

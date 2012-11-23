@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #342d25;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.FrontPage #container {
+	width: 994px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.FrontPage #header {
+	background-image:url(../images/homeheaderbg.jpg);
+	padding: 0 0 0 0;
+	height:94px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+.FrontPage #navigation {
+	padding: 0 0 0 0;
+	background:url(../images/homenavbg.gif) repeat-x;
+	height:40px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+.FrontPage #navigation a {
+	padding: 10 0 0 0;
+	margin:0; /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	font-family: 'Cuprum', arial, sans serif;
+	font-size:18px;
+	color:white;
+}
+
+.FrontPage #donate {
+position:relative;
+float:right;
+padding:8px;
+}
+.FrontPage #homebox {
+
+	background:url(../images/homebg.jpg);
+	height:483px;
+	/* position:relative;*/
+	z-index:0;
+	padding: 0; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.FrontPage #motto {
+	background:url(../images/homebox.png);
+	width:246px;
+	margin:50px 0 0 69px;
+	float:left;
+}
+.FrontPage #joinbutton {
+text-align:center;
+	height:auto;
+	width:246px;
+	margin-bottom: 10px;
+}
+.FrontPage #content-area {
+	overflow:hidden;
+	padding:10px 10px 0px 10px;
+	font-size:14px;
+	font-style:italic;
+	line-height:30px;
+	font-family: 'Droid Sans','Yanone Kaffeesatz', Verdana, arial, serif;
+	}
+.FrontPage a {
+	color:FFF;
+}	
+.FrontPage p {
+margin:0;
+}
+.FrontPage #whatsnew {
+	float:left;
+	width:150px;
+	padding:18px 0 0 110px;
+	font-size:12px;
+	color:#FFFFFF;
+}
+
+.FrontPage #blog {
+	float:left;
+	position:relative;
+	width:180px;
+	padding:18px 0 0 170px;
+	color:#FFFFFF;
+	font-size:12px;
+}
+.FrontPage #news {
+	float:left;
+	position:relative;
+	width:180px;
+	padding:18px 0 0 170px;
+	color:#FFFFFF;
+	font-size:12px;
+}
+.FrontPage #footer {
+	padding: 0; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:url(../images/footerbg.jpg) no-repeat;
+	margin:14px 0 0 0;
+	height:149px;
+	overflow: hidden;
+}
+.FrontPage #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}

@@ -297,10 +297,10 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 	 	<a href="/reports/confluence-carpe-diem-newsletter">
 	 		<img border="0" src="/<?php print $path ?>/images/whatsnew.png" />
 	 	</a>
-	 	<a href="/convergence">
+	 	<a href="/reports/confluence-carpe-diem-newsletter">
 	 		<img border="0" src="/<?php print $path ?>/images/newsletter.png" />
 	 	</a>
-    <a href="http://carpediemwest.org/reports/confluence-carpe-diem-newsletter">
+    <a href="http://carpediemwestacademy.org/convergence">
       <img src="/sites/all/themes/carpediemacademy/images/convergencenews.png" border="0">
     </a>
 	 	<a href="/blog">

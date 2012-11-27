@@ -294,10 +294,10 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 	 			<img border="0" src="/<?php print $path ?>/images/donatesmall.gif" />
 	 		</a>
 	 	</p>
-	 	<a href="/contact/whats-new">
+	 	<a href="/reports/confluence-carpe-diem-newsletter">
 	 		<img border="0" src="/<?php print $path ?>/images/whatsnew.png" />
 	 	</a>
-	 	<a href="/contact/join-our-network">
+	 	<a href="/convergence">
 	 		<img border="0" src="/<?php print $path ?>/images/newsletter.png" />
 	 	</a>
     <a href="http://carpediemwest.org/reports/confluence-carpe-diem-newsletter">

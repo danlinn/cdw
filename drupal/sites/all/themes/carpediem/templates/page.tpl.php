@@ -300,7 +300,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 	 	<a href="/contact/join-our-network">
 	 		<img border="0" src="/<?php print $path ?>/images/newsletter.png" />
 	 	</a>
-    <a href="http://archive.constantcontact.com/fs020/1101577125877/archive/1109512661683.html">
+    <a href="http://carpediemwest.org/reports/confluence-carpe-diem-newsletter">
       <img src="/sites/all/themes/carpediemacademy/images/convergencenews.png" border="0">
     </a>
 	 	<a href="/blog">

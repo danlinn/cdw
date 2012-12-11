@@ -133,9 +133,8 @@ margin:0;
 }
 .FrontPage #footer {
 	padding: 0; /* this padding matches the left alignment of the elements in the divs that appear above it. */
-	background:url(../images/footerbg.jpg) no-repeat;
+	background: #4d6378 url(../images/footerbg.jpg) no-repeat;
 	margin:14px 0 0 0;
-	height:149px;
 	position: relative;
 	overflow: hidden;
 }

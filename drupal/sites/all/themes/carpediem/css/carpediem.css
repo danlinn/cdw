@@ -11,6 +11,7 @@ body {
 }
 a {
   text-decoration:none;
+  color: #50617f;
 }
 a:hover {
   text-decoration:underline;
@@ -533,4 +534,29 @@ background: none;
 	left: 696px;
 	z-index: 9;
 }
-
+.blog-title a,
+.view-link a {
+  font-size: 16px;
+  /*color: #ff7f50;*/
+  color: #4b637f;
+}
+.view-blog-roll .picture {
+  float:left;
+}
+.view-blog-roll .picture img {
+  padding-right:10px;
+}
+.view-blog-roll ul {
+  font-size:14px;
+  list-style: none;
+}
+.clear {
+  clear:both;
+}
+.blog .body {
+  margin-top: 18px;
+}
+.blog.my-view-row {
+  border-bottom: 1px dashed #4b637f;
+  padding-bottom: 20px;
+}

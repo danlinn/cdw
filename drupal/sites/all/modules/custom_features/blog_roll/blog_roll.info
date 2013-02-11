@@ -1,5 +1,5 @@
 name = "Blog Roll"
-description = "This will enable a new blog on the production site"
+description = "This will enable a new blog on the site"
 core = "6.x"
 package = "Features"
 dependencies[] = "image"

@@ -540,6 +540,9 @@ background: none;
   /*color: #ff7f50;*/
   color: #4b637f;
 }
+.view-link {
+  clear:both;
+}
 .view-blog-roll .picture {
   float:left;
 }

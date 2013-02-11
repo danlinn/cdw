@@ -27,11 +27,11 @@ if(isset($fields['value_1'])) {
 }
 ?>
 
-<div class="blog my-view-row">
+<div class="blog my-view-row clearfix">
   <h2 class="blog-title"><?php print $fields['title']->content; ?></h2>
   <div class="user-pic"><?php print $fields['picture']->content; ?></div>
   <span class="user-info"><?php print $name; ?></span>
   <div class="user-info"><?php print $fields['created']->content; ?></div>
-  <div class="body clearleft"><?php print $fields['body']->content; ?>
-  <span class="view-link"><?php print $fields['view_node']->content; ?></span></div>
+  <div class="body clearfix"><?php print $fields['body']->content; ?></div>
+  <span class="view-link clearfix"><?php print $fields['view_node']->content; ?></span>
 </div>

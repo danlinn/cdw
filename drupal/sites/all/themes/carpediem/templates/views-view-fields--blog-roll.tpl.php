@@ -18,12 +18,12 @@
  * @ingroup views_templates
  */
 if(isset($fields['value_1'])) {
-  $name = "<a href='/users/" . $fields['name']->content . "'>" . $fields['value_1']->content . " " . $fields['value_2']->content . "</a>, " . $fields["value"]->content;
+  $name = "<a href='/user/" . $fields['uid']->content . "'>" . $fields['value_1']->content . " " . $fields['value_2']->content . "</a>, " . $fields["value"]->content;
   unset($fields['value_1']);
   unset($fields['value_2']);
   unset($fields['value']);
 } else {
-  $name = "<a href='/users/" . $fields['name']->content . "'>" . $fields['name']->content . "</a>";
+  $name = "<a href='/user/" . $fields['uid']->content . "'>" . $fields['name_1']->content . "</a>";
 }
 ?>
 
@@ -32,6 +32,6 @@ if(isset($fields['value_1'])) {
   <div class="user-pic"><?php print $fields['picture']->content; ?></div>
   <span class="user-info"><?php print $name; ?></span>
   <div class="user-info"><?php print $fields['created']->content; ?></div>
-  <div class="body clearfix"><?php print $fields['body']->content; ?></div>
+  <div class="body clearfix"><?php print $fields['teaser']->content; ?></div>
   <span class="view-link clearfix"><?php print $fields['view_node']->content; ?></span>
 </div>

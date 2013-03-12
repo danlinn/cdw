@@ -125,22 +125,22 @@
     <div id="skip-link"><a href="#main-menu"><?php print t('Jump to Navigation'); ?></a></div>
   <?php endif; ?>
 <div id="background">
-    <!-- <img src="../../../themes/carpediem/images/subbg.gif" class="stretch" alt="" width="986" />--></div> 
+    <!-- <img src="../../../themes/carpediem/images/subbg.gif" class="stretch" alt="" width="986" />--></div>
 
   <div id="container">
 
     <div id="header"><!--div class="section clearfix"--><a href="http://carpediemwestacademy.org" id="swaplink">Go to Carpe Diem West Academy</a>
-      
+
   <a href="/home" class="homelink">Home</a>
 <div id="subHeadImage" class="">
 <?php
 if(arg(0) == 'node' && is_numeric(arg(1))) {
-	$nid = arg(1); 
+	$nid = arg(1);
 }
-  
+
 	$node = node_load(array("nid" => $nid));
 	$taxonomy = $node->taxonomy;
-	
+
   if (isset($taxonomy)) {
   	foreach($taxonomy as $key => $tax) {
   		switch ($key) {
@@ -169,14 +169,14 @@ if(arg(0) == 'node' && is_numeric(arg(1))) {
   }
 	if (!isset($categ1)) {
 // this will get the path like /blog/pets/my-pet-anna-found
-$termp = $_SERVER['REQUEST_URI'];  
-// this will convert the path to an array 
-// like array('blog','pets','my-pet-anna-found')   
-$categ = explode('/',$termp);   
+$termp = $_SERVER['REQUEST_URI'];
+// this will convert the path to an array
+// like array('blog','pets','my-pet-anna-found')
+$categ = explode('/',$termp);
 
-// get the array in reverse so that you will always get the second term 
-// as the category like array('my-pet-anna-found','pets','blog')             
-//$categrev = array_reverse($categ);        
+// get the array in reverse so that you will always get the second term
+// as the category like array('my-pet-anna-found','pets','blog')
+//$categrev = array_reverse($categ);
 
 // you can assign the second term in the array to another variable
 $categ1 = $categ[1];
@@ -189,7 +189,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 	}
 
 // add a conditional statement to check if the image file exists or not,
-// if it exists then it will load the image   
+// if it exists then it will load the image
 //	if (file_exists('/home/content/d/a/n/danlinn/html/sites/carpediemwest.org/files/headers/header_' . $categ . '.jpg')) {
 	 	print '<img src="/sites/carpediemwest.org/files/headers/header_' . $categ . '.jpg" alt="' . $categ . '"/>';
 //	 }
@@ -227,7 +227,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 <a href="http://www.carpediemwest.org/"><img border="0" src="/sites/carpediemwest.org/files/navimages/home.gif" width="74" height="39" /></a><a href="/content/who-we-are"><img border="0" src="/sites/carpediemwest.org/files/navimages/who-we-are_o<?php if($categ=='who-we-are'){ print 'n'; }else{ print 'ff'; } ?>.gif" width="108" height="39" /></a><a href="/content/what-we-do"><img src="/sites/carpediemwest.org/files/navimages/what-we-do_o<?php if($categ=='what-we-do'){ print 'n'; }else{ print 'ff'; } ?>.gif" width="108" height="39" border="0"/></a><a href="/content/network"><img src="/sites/carpediemwest.org/files/navimages/network_o<?php if($categ=='network'){ print 'n'; }else{ print 'ff'; } ?>.gif" width="109" height="39" border="0" /></a><a href="/content/reports"><img src="/sites/carpediemwest.org/files/navimages/reports_o<?php if($categ=='reports'){ print 'n'; }else{ print 'ff'; } ?>.gif" width="83" height="39" border="0" /></a><a href="/contact"><img src="/sites/carpediemwest.org/files/navimages/contact_o<?php if($categ=='contact'){ print 'n'; }else{ print 'ff'; } ?>.gif" width="108" height="39" border="0" /></a-->
          <div id="hiddenNav"> <?php
 		  print $categ;
-		  
+
 		   print theme(array('links__system_main_menu', 'links'), $primary_links,
             array(
               'id' => 'main-menu',
@@ -259,7 +259,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 
         <?php print $highlight; ?>
 
-        
+
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
         <?php endif; ?>
@@ -269,7 +269,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
         <?php endif; ?>
         <?php print $help; ?>
 
-       
+
 
         <div id="content-area">
           <?php print $content; ?>
@@ -284,17 +284,17 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
       </div> <!--  /#leftContent -->
 <div id="sidebar2"><img src="/sites/carpediemwest.org/files/navimages/quicklinks.gif">
 	<div id="sidebar2Pad">
-    <?php	
+    <?php
 	$path = path_to_theme();
 	?>
-	 
+
 	 <div style="text-align:center;padding: 0;">
 	 	<p>
 	 		<a href="/donate">
 	 			<img border="0" src="/<?php print $path ?>/images/donatesmall.gif" />
 	 		</a>
 	 	</p>
-	 	<a href="/reports/confluence-carpe-diem-newsletter">
+	 	<a href="/contact/whats-new">
 	 		<img border="0" src="/<?php print $path ?>/images/whatsnew.png" />
 	 	</a>
 	 	<a href="/reports/confluence-carpe-diem-newsletter">
@@ -306,7 +306,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 	 	<a href="/blog">
 	 		<img border="0" src="/<?php print $path ?>/images/blog.png" />
 	 	</a>
-	 
+
 	 </div>
 	 <div style="text-align:center;padding: 15px 0;width:125px;margin-left: -4px;">
 	 	<a href="javascript:print();" class="feed-icon">
@@ -320,11 +320,11 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
       <?php print $sidebar_second; ?>
       </div>
 </div>
-      
+
  <div id="sidebar"><a href="/contact/whats-new"><img src="/sites/all/themes/carpediem/images/readthenews.gif" border="0" /></a>
      <div id="sideBarContent"> <?php print $sidebar_first; ?></div>
       </div>
- 
+
     </div></div> <!-- /#main, /#main-wrapper -->
 
     <?php if ($footer || $footer_message || $secondary_links): ?>

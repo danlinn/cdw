@@ -1,3 +1,6 @@
 <?php
-
+function blog_roll_menu_link_alter(&$item, $menu) {
+  path_set_alias($path = 'blog', $alias = NULL, $pid = NULL, $language = '');
+  path_set_alias($path = 'blog2', $alias = 'blog', $pid = NULL, $language = '');
+}
 include_once('blog_roll.features.inc');

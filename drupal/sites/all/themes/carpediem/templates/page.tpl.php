@@ -159,9 +159,12 @@ if(arg(0) == 'node' && is_numeric(arg(1))) {
   			case 4:
   				$categ1='reports';
   				break;
-  			case 12:
-  				$categ1='now';
-  				break;
+        case 12:
+          $categ1='now';
+          break;
+        case 13:
+          $categ1='new-visions';
+          break;
   			default:
   				$categ1='contact';
   		}
@@ -182,7 +185,7 @@ $categ = explode('/',$termp);
 $categ1 = $categ[1];
 $categ2 = $categ[2];
 	}
-if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' || $categ1 == 'network' || $categ1 == 'now') {
+if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' || $categ1 == 'network' || $categ1 == 'now' || $categ1 == 'new-visions') {
 	$categ = $categ1;
 	} else {
 	$categ = 'contact';
@@ -191,7 +194,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
 // add a conditional statement to check if the image file exists or not,
 // if it exists then it will load the image
 //	if (file_exists('/home/content/d/a/n/danlinn/html/sites/carpediemwest.org/files/headers/header_' . $categ . '.jpg')) {
-	 	print '<img src="/sites/carpediemwest.org/files/headers/header_' . $categ . '.jpg" alt="' . $categ . '"/>';
+	 	print '<img src="/sites/all/themes/carpediem/images/headers/header_' . $categ . '.jpg" alt="' . $categ . '"/>';
 //	 }
 ?>
 </div>
@@ -321,7 +324,7 @@ if ($categ1 == 'who-we-are' ||$categ1 == 'what-we-do' || $categ1 == 'reports' ||
       </div>
 </div>
 
- <div id="sidebar"><a href="/contact/whats-new"><img src="/sites/all/themes/carpediem/images/readthenews.gif" border="0" /></a>
+ <div id="sidebar">
      <div id="sideBarContent"> <?php print $sidebar_first; ?></div>
       </div>
 

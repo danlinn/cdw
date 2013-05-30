@@ -112,5 +112,5 @@ DirectoryIndex index.php
   RewriteCond %{REQUEST_URI} !=/favicon.ico
   RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 </IfModule>
-
+php_value upload_max_filesize 5M
 # $Id$

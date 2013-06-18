@@ -8,6 +8,7 @@ body {
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #000000;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   text-decoration:none;
@@ -66,52 +67,87 @@ float: left;
 .FrontPage #homebox {
 
 	background:url(../images/homebg.jpg);
-	height:483px;
+	height:417px;
 	position:relative;
 	z-index:0;
 	padding: 0; /* remember that padding is the space inside the div box and margin is the space outside the div box */
 }
 .FrontPage #motto {
-	background:url(../images/homebox.png);
-	width:246px;	margin:50px 0 0 69px;
-	float:left;
-	position: absolute;
+  background: rgba(57,42,30,.6);
+  width: 620px;
+  margin: 214px 0 0 69px;
+  position: absolute;
+  color: #fff;
+  font-family: 'Cuprum', arial, sans serif;
 }
 .FrontPage #joinbutton {
-text-align:center;
-	height:auto;
-	width:246px;
-	margin: 10px 0px;
+  height: auto;
+  float: right;
+  padding: 0px 0px 20px;
+}
+#joinbutton a {
+  background: #4a909a;
+  display: block;
+  color: #fff;
+  padding: 5px 11px 5px 11px;
+  font-size: 18px;
+}
+#joinbutton a:after {
+  content: " >";
 }
 .FrontPage #content-area {
 	overflow:hidden;
 	padding:10px 10px 0px 10px;
-	font-size:14px;
-	font-style:italic;
+	font-size:15px;
 	line-height:25px;
-	font-family: 'Droid Sans','Yanone Kaffeesatz', Verdana, arial, serif;
-	}
+}
+#motto h2 {
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin:0px;
+  line-height: 40px;
+  padding-top: 6px
+}
+#motto p {
+  font-family: verdana;
+  font-style: italic;
+  font-size: 15px;
+}
 .FrontPage a {
 	color:FFF;
 }
 .FrontPage p {
-margin:0;
+  margin:0;
 }
+
+/*NEW FOOTER STYLING*/
+.footer-left {
+  float: left;
+  width: 620px;
+}
+.footer-right {
+  float: right;
+  width: 278px;
+}
+
 .FrontPage #whatsnew {
-	float:left;
-	width:150px;
-	padding:18px 0 0 110px;
-	font-size:12px;
-	color:#FFFFFF;
+  /*float:left;
+  width:150px;
+  padding:18px 0 0 110px;*/
+  font-size:12px;
+  color:#FFFFFF;
 }
 
 .FrontPage #blog {
-	float:left;
-	position:relative;
-	width:180px;
-	padding:18px 0 0 170px;
-	color:#FFFFFF;
-	font-size:12px;
+  /*float:left;*/
+  position:relative;
+  /*width:180px;
+  padding:18px 0 0 170px;*/
+  color:#FFFFFF;
+  font-size:12px;
+  min-height: 120px;
+  margin-top: 30px
 }
 .FrontPage #blog li {
   list-style:none;
@@ -125,24 +161,49 @@ margin:0;
   margin:0px;
 }
 .FrontPage #news {
-	float:left;
-	position:relative;
-	width:180px;
-	padding:18px 0 0 170px;
-	color:#FFFFFF;
-	font-size:12px;
+  /*float:left;*/
+  position:relative;
+/*  width:180px;
+  padding:18px 0 0 170px;*/
+  color:#FFFFFF;
+  font-size:12px;
+}
+.region-cdanews {
+  margin-top:30px;
+  position: relative;
+}
+.region-footer .block {
+  font-size: 11px;
+  margin-bottom: 0px;
+  height: 40px;
+  background:#486181 url(../images/footershadow.png) repeat-x;
+  color: #fff;
+}
+
+#footer .region-footer .content a {
+  color: #5fb6e5;
+}
+.FrontPage #footer h2 {
+  font-family: Cuprum;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-weight: normal;
+  border-bottom: 2px solid #486181;
+  margin-bottom: 1em;
 }
 .FrontPage #footer {
-	padding: 0; /* this padding matches the left alignment of the elements in the divs that appear above it. */
-	background: #4d6378 url(../images/footerbg.jpg) no-repeat;
-	margin:14px 0 0 0;
+	padding: 20px 34px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background: #5c708c;
+	/*margin:14px 0 0 0;*/
 	position: relative;
 	overflow: hidden;
 }
-.FrontPage #footer p {
+.FrontPage .region-footer p {
 	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
-	padding: 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	padding: 12px 0px; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
 }
+
+
 #subHeadImage {
 width:986px;
 height:187px;
@@ -236,7 +297,7 @@ margin-top: -1px;
 	text-align:left;
 }
 .subPages #footer {
-	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	/*padding: 0 10px 0 20px;  this padding matches the left alignment of the elements in the divs that appear above it. */
 	background:#342D25;
 }
 .subPages #footer p {
@@ -484,7 +545,13 @@ ul.nice-menu-down li li.over,
   height:35px;
   display:inline-block;
 }
-
+.FrontPage .st_sharethis_custom {
+  background: url(../images/sharethis.png) no-repeat;
+  margin: 40px 0px 0px;
+}
+.FrontPage .twitter-icon {
+  margin: 40px 0px 0px
+}
 #sampleHeaderPic {
   padding: 0 20px;
 }
@@ -504,35 +571,42 @@ ul.nice-menu-down li li.over,
 background: none;
 }
 
-
+#whatsnewlink,
+#bloglink,
+#cdanewsletterlink,
+#newsletterlink {
+  display: block;
+  width:69px;
+  height:69px;
+  font-size:0px;
+  position: absolute;
+  z-index: 9;
+}
 #whatsnewlink {
-	display: block;
-	width:69px;
-	height:69px;
-	text-indent: -999999px;
-	position: absolute;
-	top: 28px;
-	left: 24px;
+	top: 68px;
+	left: 33px;
+  background: url(../images/whatsnew.png);
+}
+#whatsnew .content,
+#blog .item-list,
+#news .content {
+  padding-left:93px;
 }
 #bloglink {
-	display: block;
-	width:69px;
-	height:69px;
-	text-indent:-999999px;
-	position: absolute;
-  top: 28px;
-	left: 340px;
-	z-index: 9;
+  top: 47px;
+  left: 0px;
+  background: url(../images/blog.png);
 }
 #newsletterlink {
-	display: block;
-	width:69px;
-	height:69px;
-	text-indent:-999999px;
-	position: absolute;
-  top: 28px;
-	left: 696px;
-	z-index: 9;
+  top: 44px;
+  left: 0px;
+  background: url(../images/newsletter.png);
+}
+#cdanewsletterlink {
+  top: 44px;
+  left: 0px;
+  background: url(/sites/all/themes/carpediemacademy/images/convergencenews.png);
+  background-position: -5px -5px;
 }
 .blog-title a,
 .view-link a {

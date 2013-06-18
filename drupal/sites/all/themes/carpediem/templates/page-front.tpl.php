@@ -207,56 +207,75 @@
         <?php if ($feed_icons): ?>
          <!-- <div class="feed-icons"><?php print $feed_icons; ?></div> -->
         <?php endif; ?>
- <div id="joinbutton"><a href="/who-we-are/network"><img src="<?php print $directory; ?>/images/join.png" width="197" height="29" /></a>    </div>
-		</div>
-  
     </div>
-  <!-- end #mainContent --> 
-  </div> 
-  
-  <div id="footer">
-  <a href="/contact/whats-new" id="whatsnewlink">what's new</a>
-  <a href="/blog" id="bloglink">blog</a>
-  <a href="/contact/join-our-network" id="newsletterlink">contact</a>
-      <div id="whatsnew"><?php node_view(31, $teaser = true, $page = true, $links = true); ?> <?php print $whatsnew; ?></div>
-      <div id="blog">
-	  <?php
-/**
-* The following displays a list of the 10 most recent blog titles
-* as links to the full blogs. If you want to increase/reduce
-* the number of titles displayed, simply change $listlength value.
-*
-*/
-$listlength="2";
-
-$nodetype="blog";
-$output = node_title_list(db_query_range(db_rewrite_sql("SELECT n.nid, n.title, n.created FROM {node} n WHERE n.type = '%s' AND n.status = 1 ORDER BY n.created DESC"), $nodetype, 0, $listlength));
-print $output;
-?>
-	  
-	  </div>
-      <div id="news"><?php print $news; ?></div>
+  <!-- end #mainContent -->
   </div>
-  <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
-          array(
-            'id' => 'secondary-menu',
-            'class' => 'links clearfix',
-          ),
-          array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => 'element-invisible',
-          ));
-        ?>
-<?php if ($footer): ?>
-        <?php if ($footer_message): ?>
-          <div id="footer-message"><?php print $footer_message; ?></div>
-        <?php endif; ?>
 
-        <?php print $footer; ?>
-<?php endif; ?> 
-  <!-- end #container -->
-</div>
+  <!-- NEW FOOTER  -->
+  <div id="footer">
+    <a href="/contact/whats-new" id="whatsnewlink">what's new</a>
+
+    <div class="footer-left">
+      <div id="whatsnew">
+        <?php print $whatsnew; ?>
+      </div>
+
+      <div id="blog">
+        <a href="/blog" id="bloglink">blog</a>
+        <h2>view our recent blog posts</h2>
+      <?php
+        /**
+        * The following displays a list of the 10 most recent blog titles
+        * as links to the full blogs. If you want to increase/reduce
+        * the number of titles displayed, simply change $listlength value.
+        *
+        */
+        $listlength="2";
+
+        $nodetype="blog";
+        $output = node_title_list(db_query_range(db_rewrite_sql("SELECT n.nid, n.title, n.created FROM {node} n WHERE n.type = '%s' AND n.status = 1 ORDER BY n.created DESC"), $nodetype, 0, $listlength));
+        print $output;
+      ?>
+
+      </div>
+    </div>
+    <div class="footer-right">
+      <div id="news">
+        <a href="/contact/join-our-network" id="newsletterlink">contact</a>
+        <?php print $news; ?>
+        <?php print $cdanews; ?>
+        <div class="st_sharethis_custom" displayText="">
+        </div>
+        <a href="https://twitter.com/#!/carpediemwest" target="_blank" class="twitter-icon">
+          <img src="/sites/all/themes/carpediem/images/twitter.png" />
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- END NEW FOOTER  -->
+
+  <?php
+    print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
+      array(
+        'id' => 'secondary-menu',
+        'class' => 'links clearfix',
+      ),
+      array(
+        'text' => t('Secondary menu'),
+        'level' => 'h2',
+        'class' => 'element-invisible',
+      ));
+    if ($footer):
+      if ($footer_message): ?>
+  <div id="footer-message"><?php print $footer_message; ?></div>
+  <?php endif;
+    print $footer;
+  endif;
+  ?>
+  </div>
 
 
   <?php print $page_closure; ?>

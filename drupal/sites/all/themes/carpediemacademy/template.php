@@ -221,15 +221,18 @@ function carpediemacademy_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function carpediemacademy_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
-
-  // Optionally, run node-type-specific preprocess functions, like
-  // carpediemacademy_preprocess_node_page() or carpediemacademy_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $vars['node']->type;
-  if (function_exists($function)) {
-    $function($vars, $hook);
+  // dpm($vars);
+  if ($vars['title'] == "Webinars"){
+    if ($vars->logged_in) {
+      $block = module_invoke('block', 'block', 'view', 13);
+      $vars['webinar_text'] .= $block['content'];
+    } else {
+      $block = module_invoke('block', 'block', 'view', 14);
+      $vars['webinar_text'] = $block['content'];
+    }
+    $vars["webinars"] = views_embed_view('webinar_listings', 'block_1');
+    // dpm($vars["webinars"]);
   }
 }
 // */

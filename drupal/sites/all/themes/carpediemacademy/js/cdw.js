@@ -132,7 +132,7 @@ $(document).ready(function() {
 			}, 1000);
 		}
 	});
-	$('#subbody .views-row-1').before(expandall);
+	$('.view-Tools #subbody .views-row-1').before(expandall);
 
 	//Change forum link text
 	$('.topic-next').text("Next Topic >");

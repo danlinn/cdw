@@ -67,6 +67,7 @@ regions[homeleft]       = Home Left
 regions[homeright]           = Home Right
 regions[highlight]      = Highlighted content
 regions[content_top]    = Content top
+regions[content_region] = Content
 regions[content_bottom] = Content bottom
 regions[header]         = Header
 regions[footer]         = Footer

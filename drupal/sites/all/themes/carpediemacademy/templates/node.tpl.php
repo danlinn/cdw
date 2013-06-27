@@ -72,7 +72,7 @@
  * @see zen_preprocess_node()
  * @see zen_process()
  */
- 
+
  if (!$is_front) {
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
@@ -108,7 +108,10 @@
 
     <div id="subbody">
     <?php  print $node->content['body']['#value'];
-    print $node->content['webform']['#value']; ?>
+      print $node->content['webform']['#value'];
+      print $webinar_text;
+      print $webinars;
+    ?>
     </div>
   </div>
 

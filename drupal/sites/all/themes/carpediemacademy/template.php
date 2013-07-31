@@ -207,7 +207,6 @@ function carpediemacademy_preprocess(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function carpediemacademy_preprocess_page(&$vars, $hook) {
-	$vars['sample_variable'] = t('Lorem ipsum.');
 	$external_js = 'http://w.sharethis.com/button/buttons.js';
 
 }
@@ -222,7 +221,11 @@ function carpediemacademy_preprocess_page(&$vars, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 function carpediemacademy_preprocess_node(&$vars, $hook) {
-  // dpm($vars);
+  $title = $vars['title'];
+  if (substr($title,0,5) == 'STAGE') {
+    $block = module_invoke('views', 'block', 'view', 'Tools-block_1');
+    $vars['tool_block'] = "<h3>" . $block['subject']  . "</h3>" . $block['content'];
+  }
   if ($vars['title'] == "Webinars"){
     if ($vars->logged_in) {
       $block = module_invoke('block', 'block', 'view', 13);
@@ -245,6 +248,12 @@ function carpediemacademy_preprocess_forums(&$variables, $hook) {
             )), 'html' => TRUE);
   }
 }
+
+function carpediemacademy_views_view_field($view, $field, $row) {
+  // dpm($row);
+  return $view->field[$field->options['id']]->advanced_render($row);
+}
+
 /**
  * Override or insert variables into the comment templates.
  *

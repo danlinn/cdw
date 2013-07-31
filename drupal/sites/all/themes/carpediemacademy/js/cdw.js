@@ -1,7 +1,15 @@
 $(document).ready(function() {
+	$('.view-id-Hero .item-list ul').addClass('slides');
+	$('.view-id-Hero').flexslider({
+    animation: "slide",
+    slideshowSpeed: 4000,
+    controlNav: false,
+    directionNav: false,
+  });
+
+
 
 	//Intros for tools
-
 	moveme = $('#block-block-5');
 	$('#block-block-5').remove();
 	$('#subbody').prepend(moveme);
@@ -52,8 +60,15 @@ $(document).ready(function() {
 	//User login box
 	userlogin = document.createElement("a");
 	$(userlogin).addClass("user-login-switch");
-	$(userlogin).text("login");
+	$(userlogin).text("Log-in");
 
+	//Register link
+	reglogin = document.createElement("a");
+	$(reglogin).addClass("user-register-link");
+	$(reglogin).attr("href",'/user/register');
+	$(reglogin).text("Register");
+
+	$('.block-user').before(reglogin);
 	$('.block-user').before(userlogin);
 	$(".user-login-switch").click(function(){
 		$('.block-user').toggle();
@@ -77,7 +92,7 @@ $(document).ready(function() {
 
 	function userOff() {
 		$('.white-hover').remove();
-		$(userlogin).text("login");
+		$(userlogin).text("Log-in");
 		$('.block-user').hide();
 		$('.user-login-switch').removeClass("active");
 
@@ -112,6 +127,7 @@ $(document).ready(function() {
 			}, 1000);
 		});
 
+
 	expandall = document.createElement('a');
 	$(expandall).text('expand all').addClass("expandlink").click(function(){
 		if($(this).hasClass('clicked')) {
@@ -132,7 +148,11 @@ $(document).ready(function() {
 			}, 1000);
 		}
 	});
-	$('.view-Tools #subbody .views-row-1').before(expandall);
+	if ($('.view-Tools #subbody .views-row-1').length > 0) {
+		$('.view-Tools #subbody .views-row-1').before(expandall);
+	} else {
+		$('.view-Tools .views-row-1').before(expandall);
+	}
 
 	//Change forum link text
 	$('.topic-next').text("Next Topic >");
@@ -151,7 +171,8 @@ $(document).ready(function() {
 	userlink = document.createElement("a");
 	$(userlink).attr("href","/user");
 	$(userlink).text(newtext);
-	$('#block-logintoboggan-0 .content').html(userlink).append("&nbsp;|&nbsp;").append(link);
+	$('#block-logintoboggan-0 .content').html(userlink).append(link);
+	$('#block-logintoboggan-0 .content a').wrap('<li>');
 
 
 	//Tool of the month image

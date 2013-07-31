@@ -77,13 +77,13 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php //print $user_picture; ?>
-<div id="subheadbox">
+<!-- <div id="subheadbox">
     <div id="subheader">
     <h2 class="title"><?php print $title; ?></h2>
     <?php print $node->field_subhead[0]['view'] ?></div>
     <div id="headerimage"><?php print $node->field_headimage[0]['view'] ?></div>
   </div>
-  <?php if ($unpublished): ?>
+ -->  <?php if ($unpublished): ?>
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
 
@@ -111,6 +111,7 @@
       print $node->content['webform']['#value'];
       print $webinar_text;
       print $webinars;
+      print $tool_block;
     ?>
     </div>
   </div>

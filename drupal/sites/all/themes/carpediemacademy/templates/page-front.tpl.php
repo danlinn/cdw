@@ -119,146 +119,76 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> front">
-
   <?php if ($primary_links): ?>
     <div id="skip-link"><a href="#main-menu"><?php print t('Jump to Navigation'); ?></a></div>
   <?php endif; ?>
-
-  <div id="page-wrapper"><div id="page">
-
-    <div id="header"><div class="section clearfix"><a href="http://www.carpediemwest.org" id="swaplink">Go to Carpe Diem West</a>
-
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-      <?php endif; ?>
-
-      <?php if ($site_name || $site_slogan): ?>
-        <div id="name-and-slogan">
-          <?php if ($site_name): ?>
-            <?php if ($title): ?>
-              <div id="site-name"><strong>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong></div>
-            <?php else: /* Use h1 when the content title is empty */ ?>
-              <h1 id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </h1>
+  <div class="fullwidth">
+    <div id="header" class="page-width">
+      <div class="section clearfix"><a href="http://www.carpediemwest.org" id="swaplink">Go to Carpe Diem West</a>
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <?php endif; ?>
+        <?php if ($site_name || $site_slogan): ?>
+          <div id="name-and-slogan">
+            <?php if ($site_name): ?>
+              <?php if ($title): ?>
+                <div id="site-name"><strong>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                </strong></div>
+              <?php else: /* Use h1 when the content title is empty */ ?>
+                <h1 id="site-name">
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                </h1>
+              <?php endif; ?>
             <?php endif; ?>
-          <?php endif; ?>
-
-          <?php if ($site_slogan): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /#name-and-slogan -->
-      <?php endif; ?>
-
-      <?php if ($search_box): ?>
-        <div id="search-box"><?php print $search_box; ?></div>
-      <?php endif; ?>
-
-      <?php print $header; ?>
-<?php if ($primary_links || $navigation): ?>
-        <div id="navigation"><div class="section clearfix">
-
-          <?php
-          // print theme(array('links__system_main_menu', 'links'), $primary_links,
-          //             array(
-          //               'id' => 'main-menu',
-          //               'class' => 'links clearfix',
-          //             ),
-          //             array(
-          //               'text' => t('Main menu'),
-          //               'level' => 'h2',
-          //               'class' => 'element-invisible',
-          //             ));
-          ?>
-
-          <?php print $navigation; ?>
-
-        </div></div> <!-- /.section, /#navigation -->
-      <?php endif; ?>
-    </div></div> <!-- /.section, /#header -->
-
-    <div id="main-wrapper">
-      <?php print $messages; ?>
-
-      <div id="main" class="clearfix<?php if ($primary_links || $navigation) { print ' with-navigation'; } ?>">
-
-      <div id="content" class="column"><div class="section">
-
-        <?php if ($mission): ?>
-          <div id="mission"><?php print $mission; ?></div>
+            <?php if ($site_slogan): ?>
+              <div id="site-slogan"><?php print $site_slogan; ?></div>
+            <?php endif; ?>
+          </div> <!-- /#name-and-slogan -->
         <?php endif; ?>
-
-        <?php print $highlight; ?>
-
-        <?php print $breadcrumb; ?>
-        <?php if ($title): ?>
-          <!-- <h1 class="title"><?php print $title; ?></h1> -->
+        <?php if ($search_box): ?>
+          <div id="search-box"><?php print $search_box; ?></div>
         <?php endif; ?>
-        <?php if ($tabs): ?>
-          <div class="tabs"><?php print $tabs; ?></div>
+        <?php print $header; ?>
+        <?php if ($navigation): ?>
+          <div id="navigation"><div class="section clearfix">
+            <?php print $navigation; ?>
+          </div></div> <!-- /.section, /#navigation -->
         <?php endif; ?>
-        <?php print $help; ?>
-
-        <?php print $content_top; ?>
-
-        <div id="content-area">
-         <?php print $content; ?>
+      </div>
+    </div> <!-- /Header -->
+    <div class="line-95"></div>
+    <?php print $messages; ?>
+    <div id="marquee" class="fullwidth">
+      <?php print $marquee; ?>
+    </div>
+    <div id="content" class="fullwidth clearfix">
+      <div class="line-95"></div>
+      <div class="page-width">
+        <div class="two-thirds">
+          <div class="first-third">
+            <?php print $homeleft; ?>
+          </div>
+          <div class="second-third">
+            <?php print $homemid; ?>
+          </div>
         </div>
-
-        <?php print $content_bottom; ?>
-
-        <?php if ($feed_icons): ?>
-          <!-- <div class="feed-icons"><?php print $feed_icons; ?></div> -->
-        <?php endif; ?>
-
-      </div></div> <!-- /.section, /#content -->
-
-      <?php print $sidebar_first; ?>
-
-      <?php print $sidebar_second; ?>
-
-    </div></div> <!-- /#main, /#main-wrapper -->
-
-
-      <div id="footer"><div id="footerboxes" class="section">
-          <div class="boxtop"></div>
-        <div id="homeleft" class="homebox">
-<?php print $homeleft; ?>
-          </div>
-          
-          <div id="homeright" class="homebox">
-<?php print $homeright; ?>
-          </div>
-          
-          <div class="clearfix"></div>
-          <div class="boxbottom"></div>
-        <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
-          array(
-            'id' => 'secondary-menu',
-            'class' => 'links clearfix',
-          ),
-          array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => 'element-invisible',
-          ));
-        ?>
-
-        <?php if ($footer_message): ?>
-          <div id="footer-message"><?php print $footer_message; ?></div>
-        <?php endif; ?>
-
-        
-
-      </div></div> <!-- /.section, /#footer -->
-<?php print $footer; ?>
-  </div></div> <!-- /#page, /#page-wrapper -->
+        <div class="third-third">
+          <?php print $homeright; ?>
+        </div>
+      </div>
+    </div> <!-- /Content -->
+    <div class="footer page-width">
+      <div class="two-thirds">
+        <?php print $footerleft; ?>
+      </div>
+      <div class="third-third">
+        <?php print $footerright; ?>
+      </div>
+    </div>
+  </div> <!-- /Page -->
 
   <?php print $page_closure; ?>
-
   <?php print $closure; ?>
-
 </body>
 </html>

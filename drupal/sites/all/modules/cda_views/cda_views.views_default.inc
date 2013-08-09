@@ -1,0 +1,2561 @@
+<?php
+
+/**
+ * Implementation of hook_views_default_views().
+ */
+function cda_views_views_default_views() {
+  $views = array();
+
+  // Exported view: Hero
+  $view = new view;
+  $view->name = 'Hero';
+  $view->description = 'This displays the hero content type in a  marquee on the home page';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 6;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'field_byline_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_byline_value',
+      'table' => 'node_data_field_byline',
+      'field' => 'field_byline_value',
+      'relationship' => 'none',
+    ),
+    'field_hero_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_hero_image_fid',
+      'table' => 'node_data_field_hero_image',
+      'field' => 'field_hero_image_fid',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'hero' => 'hero',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('style_plugin', 'list');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'type' => 'ul',
+  ));
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 1,
+  ));
+  $handler = $view->new_display('block', 'Hero Block', 'block_1');
+  $handler->override_option('fields', array(
+    'field_byline_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_byline_value',
+      'table' => 'node_data_field_byline',
+      'field' => 'field_byline_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_hero_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_hero_image_fid',
+      'table' => 'node_data_field_hero_image',
+      'field' => 'field_hero_image_fid',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => 'Title',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 1,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'hero' => 'hero',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
+  // Exported view: Tools
+  $view = new view;
+  $view->name = 'Tools';
+  $view->description = 'This view contains all of the views for the Tool Compendium';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 0;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'path' => array(
+      'label' => 'Path',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '[path]',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'absolute' => 1,
+      'exclude' => 1,
+      'id' => 'path',
+      'table' => 'node',
+      'field' => 'path',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'body' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'exclude' => 0,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'relationship' => 'none',
+    ),
+    'field_url_value' => array(
+      'label' => 'URL',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_value] ',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'widget',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_url_value',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_value',
+      'relationship' => 'none',
+    ),
+    'comment_count' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '[comment_count] comments',
+        'make_link' => 1,
+        'path' => '[path]',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 0,
+      'set_precision' => FALSE,
+      'precision' => 0,
+      'decimal' => '.',
+      'separator' => ',',
+      'format_plural' => 0,
+      'format_plural_singular' => '1',
+      'format_plural_plural' => '@count',
+      'prefix' => '',
+      'suffix' => '',
+      'exclude' => 0,
+      'id' => 'comment_count',
+      'table' => 'node_comment_statistics',
+      'field' => 'comment_count',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'comments_link' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => 'Add New Comment',
+        'make_link' => 1,
+        'path' => '[path]',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 0,
+      'teaser' => 0,
+      'exclude' => 0,
+      'id' => 'comments_link',
+      'table' => 'node',
+      'field' => 'comments_link',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'title' => array(
+      'order' => 'ASC',
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        2 => '2',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Keywords',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'role',
+    'role' => array(
+      2 => 2,
+    ),
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('title', 'Guide Tools');
+  $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/data-icon.png" class="tool-icon">');
+  $handler->override_option('header_format', '3');
+  $handler->override_option('header_empty', 1);
+  $handler->override_option('empty', '<div id="subheadbox">
+    <div id="subheader">
+    
+    <h2 class="title">No Tools Found</h2>
+    </div>
+    <div id="headerimage"></div>
+  </div>
+ <div class="content" id="subcontent">
+
+    <div id="subbody">
+Please try a different word or phrase.
+ </div>
+  </div>');
+  $handler->override_option('empty_format', '2');
+  $handler->override_option('items_per_page', 0);
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 0,
+  ));
+  $handler = $view->new_display('page', 'Data Tools', 'page_1');
+  $handler->override_option('title', 'Data Tools');
+  $handler->override_option('path', 'tools/data');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('page', 'Guide Tools', 'page_2');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        1 => '1',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/guide-icon.png" class="tool-icon">');
+  $handler->override_option('path', 'tools/guides');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('page', 'Information Tools', 'page_3');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        3 => '3',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('title', 'Information Tools');
+  $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/info-icon.png" class="tool-icon">');
+  $handler->override_option('path', 'tools/information');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('page', 'Training Tools', 'page_4');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        4 => '4',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('title', 'Training Tools');
+  $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/training-icon.png" class="tool-icon">');
+  $handler->override_option('path', 'tools/training');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('page', 'All Tools', 'page_5');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        2 => '2',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('title', 'All Tools');
+  $handler->override_option('exposed_block', TRUE);
+  $handler->override_option('path', 'tools/all-tools');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('block', 'Roadmap Tools', 'block_1');
+  $handler->override_option('fields', array(
+    'path' => array(
+      'label' => 'Path',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '[path]',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'absolute' => 1,
+      'exclude' => 1,
+      'id' => 'path',
+      'table' => 'node',
+      'field' => 'path',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'body' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'exclude' => 0,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'relationship' => 'none',
+    ),
+    'field_url_value' => array(
+      'label' => 'URL',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => '[field_url_value] ',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'widget',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_url_value',
+      'table' => 'node_data_field_url',
+      'field' => 'field_url_value',
+      'relationship' => 'none',
+    ),
+    'comment_count' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '[comment_count] comments',
+        'make_link' => 1,
+        'path' => '[path]',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 0,
+      'set_precision' => FALSE,
+      'precision' => 0,
+      'decimal' => '.',
+      'separator' => ',',
+      'format_plural' => 0,
+      'format_plural_singular' => '1',
+      'format_plural_plural' => '@count',
+      'prefix' => '',
+      'suffix' => '',
+      'exclude' => 0,
+      'id' => 'comment_count',
+      'table' => 'node_comment_statistics',
+      'field' => 'comment_count',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+    ),
+    'comments_link' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => 'Add New Comment',
+        'make_link' => 1,
+        'path' => '[path]',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 0,
+      'teaser' => 0,
+      'exclude' => 0,
+      'id' => 'comments_link',
+      'table' => 'node',
+      'field' => 'comments_link',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+    ),
+    'title_1' => array(
+      'label' => 'TITITITITITITLE',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title_1',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('arguments', array(
+    'field_roadmap_steps_nid' => array(
+      'default_action' => 'default',
+      'style_plugin' => 'default_summary',
+      'style_options' => array(),
+      'wildcard' => 'all',
+      'wildcard_substitution' => 'All',
+      'title' => '',
+      'breadcrumb' => '',
+      'default_argument_type' => 'node',
+      'default_argument' => '',
+      'validate_type' => 'node',
+      'validate_fail' => 'not found',
+      'break_phrase' => 0,
+      'not' => 0,
+      'id' => 'field_roadmap_steps_nid',
+      'table' => 'node_data_field_roadmap_steps',
+      'field' => 'field_roadmap_steps_nid',
+      'validate_user_argument_type' => 'uid',
+      'validate_user_roles' => array(
+        2 => 0,
+        4 => 0,
+        5 => 0,
+        6 => 0,
+        9 => 0,
+        3 => 0,
+        7 => 0,
+        8 => 0,
+      ),
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'default_options_div_prefix' => '',
+      'default_taxonomy_tid_term_page' => 0,
+      'default_taxonomy_tid_node' => 0,
+      'default_taxonomy_tid_limit' => 0,
+      'default_taxonomy_tid_vids' => array(
+        2 => 0,
+        3 => 0,
+        1 => 0,
+        4 => 0,
+      ),
+      'default_argument_user' => 0,
+      'default_argument_fixed' => '',
+      'default_argument_image_size' => '_original',
+      'default_argument_php' => '',
+      'validate_argument_node_type' => array(
+        'page' => 'page',
+        'blog' => 0,
+        'image' => 0,
+        'forum' => 0,
+        'tool' => 0,
+        'webform' => 0,
+        'webinar' => 0,
+      ),
+      'validate_argument_node_access' => 1,
+      'validate_argument_nid_type' => 'nid',
+      'validate_argument_vocabulary' => array(
+        2 => 0,
+        3 => 0,
+        1 => 0,
+        4 => 0,
+      ),
+      'validate_argument_type' => 'tid',
+      'validate_argument_transform' => 0,
+      'validate_user_restrict_roles' => 0,
+      'image_size' => array(
+        '_original' => '_original',
+        'thumbnail' => 'thumbnail',
+        'preview' => 'preview',
+      ),
+      'validate_argument_php' => '',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        2 => '2',
+        1 => '1',
+        3 => '3',
+        4 => '4',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('title', 'Related Tools');
+  $handler->override_option('header', '');
+  $handler->override_option('header_empty', 0);
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Guides Block', 'block_2');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        2 => '2',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('panel_pane', 'Guides pane', 'panel_pane_1');
+  $handler->override_option('filters', array(
+    'type_1' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type_1',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'tid' => array(
+      'operator' => 'or',
+      'value' => array(
+        2 => '2',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '1',
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'keys' => array(
+      'operator' => 'optional',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'keys_op',
+        'identifier' => 'keys',
+        'label' => 'Search',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'id' => 'keys',
+      'table' => 'search_index',
+      'field' => 'keys',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'sector',
+        'label' => 'Sector',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '3',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_2' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_2_op',
+        'identifier' => 'tool_type',
+        'label' => 'Type',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '4',
+      'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+  ));
+  $handler->override_option('pane_title', '');
+  $handler->override_option('pane_description', '');
+  $handler->override_option('pane_category', array(
+    'name' => 'View panes',
+    'weight' => 0,
+  ));
+  $handler->override_option('allow', array(
+    'use_pager' => FALSE,
+    'items_per_page' => FALSE,
+    'offset' => FALSE,
+    'link_to_view' => FALSE,
+    'more_link' => FALSE,
+    'path_override' => FALSE,
+    'title_override' => FALSE,
+    'exposed_form' => FALSE,
+    'fields_override' => FALSE,
+  ));
+  $handler->override_option('argument_input', array());
+  $handler->override_option('link_to_view', 0);
+  $handler->override_option('inherit_panels_path', 0);
+
+  $views[$view->name] = $view;
+
+  // Exported view: page_header
+  $view = new view;
+  $view->name = 'page_header';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 6;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'field_headimage_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '<img src="/sites/all/themes/carpediemacademy/images/toolsheader.jpg">',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_headimage_fid',
+      'table' => 'node_data_field_headimage',
+      'field' => 'field_headimage_fid',
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('arguments', array(
+    'nid' => array(
+      'default_action' => 'default',
+      'style_plugin' => 'default_summary',
+      'style_options' => array(),
+      'wildcard' => 'all',
+      'wildcard_substitution' => 'All',
+      'title' => '',
+      'breadcrumb' => '',
+      'default_argument_type' => 'node',
+      'default_argument' => '',
+      'validate_type' => 'none',
+      'validate_fail' => 'empty',
+      'break_phrase' => 0,
+      'not' => 0,
+      'id' => 'nid',
+      'table' => 'node',
+      'field' => 'nid',
+      'validate_user_argument_type' => 'uid',
+      'validate_user_roles' => array(
+        2 => 0,
+        4 => 0,
+        5 => 0,
+        6 => 0,
+        9 => 0,
+        3 => 0,
+        7 => 0,
+        8 => 0,
+      ),
+      'relationship' => 'none',
+      'default_options_div_prefix' => '',
+      'default_taxonomy_tid_term_page' => 0,
+      'default_taxonomy_tid_node' => 0,
+      'default_taxonomy_tid_limit' => 0,
+      'default_taxonomy_tid_vids' => array(
+        2 => 0,
+        3 => 0,
+        1 => 0,
+        4 => 0,
+      ),
+      'default_argument_user' => 0,
+      'default_argument_fixed' => '',
+      'default_argument_image_size' => '_original',
+      'default_argument_php' => '',
+      'validate_argument_node_type' => array(
+        'blog' => 0,
+        'image' => 0,
+        'forum' => 0,
+        'hero' => 0,
+        'page' => 0,
+        'tool' => 0,
+        'webform' => 0,
+        'webinar' => 0,
+      ),
+      'validate_argument_node_access' => 0,
+      'validate_argument_nid_type' => 'nid',
+      'validate_argument_vocabulary' => array(
+        2 => 0,
+        3 => 0,
+        1 => 0,
+        4 => 0,
+      ),
+      'validate_argument_type' => 'tid',
+      'validate_argument_transform' => 0,
+      'validate_user_restrict_roles' => 0,
+      'image_size' => array(
+        '_original' => '_original',
+        'thumbnail' => 'thumbnail',
+        'preview' => 'preview',
+      ),
+      'validate_argument_php' => '',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('empty', '<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-field-headimage-fid">
+                <span class="field-content"><img class="imagefield imagefield-field_headimage" width="439" height="109" alt="" src="http://test.carpediemwestacademy.org/sites/carpediemwestacademy.org/files/imagefield_default_images/columbia.jpg"></span>
+  </div>
+  
+  </div>');
+  $handler->override_option('empty_format', '3');
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('block_description', 'Page Header Image and Title');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
+  // Exported view: roadmap_nodes
+  $view = new view;
+  $view->name = 'roadmap_nodes';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 6;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'title' => array(
+      'operator' => 'contains',
+      'value' => 'STAGE ',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+        'optional' => FALSE,
+      ),
+      'case' => 1,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->override_option('path', 'roadmap-view');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+
+  $views[$view->name] = $view;
+
+  // Exported view: tool_of_the_month
+  $view = new view;
+  $view->name = 'tool_of_the_month';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 0;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'field_tool_month_value' => array(
+      'order' => 'DESC',
+      'delta' => -1,
+      'id' => 'field_tool_month_value',
+      'table' => 'node_data_field_tool_month',
+      'field' => 'field_tool_month_value',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'tool' => 'tool',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_tool_month_value' => array(
+      'operator' => 'not empty',
+      'value' => array(
+        'value' => NULL,
+        'min' => NULL,
+        'max' => NULL,
+        'default_date' => '',
+        'default_to_date' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'date_fields' => array(
+        'node_data_field_tool_month.field_tool_month_value' => 'node_data_field_tool_month.field_tool_month_value',
+      ),
+      'date_method' => 'OR',
+      'granularity' => 'day',
+      'form_type' => 'date_popup',
+      'default_date' => '',
+      'default_to_date' => '',
+      'year_range' => '-1:+1',
+      'id' => 'field_tool_month_value',
+      'table' => 'node_data_field_tool_month',
+      'field' => 'field_tool_month_value',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('items_per_page', 1);
+  $handler->override_option('row_plugin', 'node');
+  $handler->override_option('row_options', array(
+    'relationship' => 'none',
+    'build_mode' => 'teaser',
+    'links' => 1,
+    'comments' => 0,
+  ));
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'text' => 'Learn More',
+      'exclude' => 0,
+      'id' => 'view_node',
+      'table' => 'node',
+      'field' => 'view_node',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('row_plugin', 'fields');
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 0,
+  ));
+  $handler->override_option('block_description', 'Subpage Tool of the Month');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Home Block', 'block_2');
+  $handler->override_option('block_description', 'HomePage Tool of the Month');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
+  // Exported view: webinar_listings
+  $view = new view;
+  $view->name = 'webinar_listings';
+  $view->description = 'Listings of Webinars';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 6;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'webinar' => 'webinar',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('header', 'Upcoming Webinar:
+<img src="/sites/all/themes/carpediemacademy/images/whatsnew.png" class="sidebar-icon whats-new">');
+  $handler->override_option('header_format', '3');
+  $handler->override_option('header_empty', 0);
+  $handler->override_option('row_plugin', 'node');
+  $handler->override_option('row_options', array(
+    'relationship' => 'none',
+    'build_mode' => 'teaser',
+    'links' => 0,
+    'comments' => 0,
+  ));
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('block_description', 'Webinar Block');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Upcoming', 'block_2');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_webinar_date_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'group' => TRUE,
+      ),
+      'repeat' => array(
+        'show_repeat_rule' => '',
+      ),
+      'fromto' => array(
+        'fromto' => 'both',
+      ),
+      'exclude' => 0,
+      'id' => 'field_webinar_date_value',
+      'table' => 'node_data_field_webinar_date',
+      'field' => 'field_webinar_date_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_webinar_time_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_webinar_time_value',
+      'table' => 'node_data_field_webinar_time',
+      'field' => 'field_webinar_time_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('title', 'What\'s New!');
+  $handler->override_option('header', '<span class="upcoming-label">Upcoming Webinar:</span>
+<img src="/sites/all/themes/carpediemacademy/images/whatsnew.png" class="sidebar-icon whats-new">');
+  $handler->override_option('items_per_page', 1);
+  $handler->override_option('row_plugin', 'fields');
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 0,
+  ));
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
+  return $views;
+}

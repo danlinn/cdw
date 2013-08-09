@@ -76,14 +76,7 @@
  if (!$is_front) {
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
-  <?php //print $user_picture; ?>
-<!-- <div id="subheadbox">
-    <div id="subheader">
-    <h2 class="title"><?php print $title; ?></h2>
-    <?php print $node->field_subhead[0]['view'] ?></div>
-    <div id="headerimage"><?php print $node->field_headimage[0]['view'] ?></div>
-  </div>
- -->  <?php if ($unpublished): ?>
+  <?php if ($unpublished): ?>
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
 
@@ -107,6 +100,9 @@
   <div class="content" id="subcontent">
 
     <div id="subbody">
+<h2 class="subhead">
+    <?php
+    print $node->field_subhead[0]['value'] ?></h2>
     <?php  print $node->content['body']['#value'];
       print $node->content['webform']['#value'];
       print $webinar_text;

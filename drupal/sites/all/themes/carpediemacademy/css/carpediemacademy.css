@@ -123,10 +123,7 @@ padding: 0px;
 .block-nice_menus ul#nice-menu-1 li:last-child a {
   border-right:none;
 }
-.front #navigation li:first-child,
-.front .block-nice_menus li:first-child {
-  display:none;
-}
+
 .front .block-nice_menus li ul li:first-child {
   display:block;
 }
@@ -360,7 +357,27 @@ text-decoration: none;
 padding:10px;
 }
 .sidebar .title {
-	font-size: 16px;
+	font-size: 14px;
+  font-family: verdana;
+  text-transform: uppercase;
+  color: #c77a0c;
+}
+.sidebar-icon {
+  float: left;
+}
+.sidebar {
+  font-size: 13px;
+  color:#ccc;
+}
+#block-views-webinar_listings-block_2 .title {
+  margin-left: 60px;
+}
+#block-views-webinar_listings-block_2 .view-content {
+  margin-left: 60px;
+}
+.sidebar .views-field-title a {
+  font-weight: normal;
+  color:#ccc;
 }
 #subbody {
 /*  width:610px;
@@ -375,8 +392,10 @@ padding:10px;
 	min-height: 0px;
 }
 div.tabs {
-  position: absolute;
-  z-index: 5;
+  position: relative;
+  /*z-index: 5;*/
+  top: -20px;
+  margin-bottom: -20px;
 }
 .page-node-33-webform-components div.tabs {
   position:relative;
@@ -446,30 +465,30 @@ display:none;
 position: relative;
 }
 .view-filters {
-	position: absolute;
+	/*position: absolute;
 	top: 105px;
-	right: 0px;
+	right: 0px;*/
 }
 .view-filters .views-widget-filter-keys label {
-	display:none;
+	/*display:none;*/
 }
 
 .view-filters label {
   display: inline-block;
 }
 #edit-submit-Tools {
-display: block;
-text-indent: -9999px;
-width: 36px;
-height: 24px;
-background: url(/sites/all/themes/carpediemacademy/images/search.jpg);
-border: 0px;
-position: absolute;
-right: 206px;
-top: 25px;
+  /*display: block;
+  text-indent: -9999px;
+  width: 36px;
+  height: 24px;
+  background: url(/sites/all/themes/carpediemacademy/images/search.jpg);
+  border: 0px;
+  position: absolute;
+  right: 206px;
+  top: 25px;*/
 }
 #edit-keys {
-background: url(/sites/all/themes/carpediemacademy/images/search.jpg) top right;
+/*background: url(/sites/all/themes/carpediemacademy/images/search.jpg) top right;
 border: 0px;
 width: 195px;
 height: 22px;
@@ -477,7 +496,7 @@ position: absolute;
 right: 8px;
 top: 25px;
 z-index: 500;
-padding: 0 0 2px 38px;
+padding: 0 0 2px 38px;*/
 }
 .tool-icon {
 padding: 35px 0px 20px 30px;
@@ -486,7 +505,7 @@ width: 50px;
 height: 50px;
 }
 .view-Tools #subbody {
-	padding-top:35px;
+	/*padding-top:35px;*/
 }
 .node-type-tool #subheadbox .title {
 height: 85px;
@@ -554,9 +573,12 @@ text-overflow: ellipsis;
 	padding:10px;
 
 }
-.section-tools .views-row-first {
+.section-tools .views-Tools .views-row-first {
 	margin-top:10px;
 	}
+  .upcoming-label {
+    margin-left: 5px;
+  }
 li.tool {
 	list-style: none;
 }
@@ -587,6 +609,13 @@ text-decoration: none;
 .view-Tools .title {
 	margin: 20px 0px;
 }
+.view-Tools .view-header {
+  display: none;
+}
+.view-Tools .view-filters {
+  width: 650px;
+}
+/*
 .views-exposed-widgets {
 position: relative;
 }
@@ -607,6 +636,7 @@ margin:0px;
 .views-exposed-form .views-widget-filter-tid_1 {
   margin-top: 43px;
 }
+*/
 .roadmaplink {
 position: absolute;
 display: block;
@@ -741,7 +771,7 @@ padding-right: 20px;
 
 
 #content div.tabs {
-top: 97px;
+/*top: 97px;*/
 }
 .section-roadmap .title{
 	width:410px;
@@ -793,7 +823,7 @@ div.block.block-logintoboggan div.edit {
 	list-style: none;
 	}
 .block-user .form-item label {
-	font-weight: normal;
+	/*font-weight: normal;*/
 }
 .white-hover {
 background: #666;
@@ -860,8 +890,12 @@ body .node-unpublished {
 .no-bullets {
 	list-style: none;
 }
-.block-user .item-list {
+.block-user .item-list .first {
   display: none;
+}
+#header .block-user .item-list li a {
+  border-right: 0px;
+  padding: 0px;
 }
 .image-li {
 height: 60px;
@@ -876,6 +910,7 @@ padding-left: 75px;
 }
 .image-li-img {
 float: left;
+clear: left;
 margin-top: 10px;
 }
 #block-views--exp-Tools-page_5 label {
@@ -946,6 +981,7 @@ a.showimagesmall {
 .line-95 {
   width: 100%;
   width: calc(100% - 10px);
+  width: -webkit-calc(100% - 10px);
   margin: 0px auto;
   height: 4px;
   border-top: 1px solid #5e6353;
@@ -958,7 +994,8 @@ a.showimagesmall {
   margin-bottom: 12px;
 }
 .not-front #content .line-95 {
-  position: absolute;
+  margin-bottom: -4px;
+  position: relative;
 }
 #logo {
   margin: 17px 0 0 66px;
@@ -983,7 +1020,7 @@ a.showimagesmall {
   list-style: none;
 }
 #header .block li a {
-  color: #879075;
+  color: #cccccc;
   line-height: 1em;
   padding: 0px 17px;
   border-right: 1px solid #879075;
@@ -1040,10 +1077,10 @@ div.block.home-page-content-block {
   text-align: center;
   font-family: StRyde;
   font-size: 15px;
+  line-height: 26px;
   -webkit-font-smoothing: antialiased;
   color: #fff;
   width: 322px;
-  height: 132px;
   top: 173px;
   left:25px;
 }
@@ -1064,6 +1101,13 @@ a {
   text-decoration: none;
   color:#2c94b9;
   font-weight: bold;
+}
+#header a {
+  font-weight: normal;
+  font-family: StRyde;
+}
+#header .block li a {
+  font-family: StRyde;
 }
 .front #marquee div.block {
   margin: 0;
@@ -1112,7 +1156,8 @@ body * {
   color: #c77a0c;
   font-size: 16px;
   font-family: verdana;
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: -0.1em;
 }
 .front #content p {}
 .front #content .title {
@@ -1200,7 +1245,9 @@ a.user-register-link {
   line-height: 0px;
   display: block;
 }
-.page-header-block .views-field-title{
+.page-header-block .views-field-title,
+.view-Tools .title,
+.sitemap-title {
   position: absolute;
   bottom: 25px;
   left: 25px;
@@ -1220,7 +1267,7 @@ a.user-register-link {
 }
 .not-front #content .two-thirds {
   width: 700px;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
 }
 .not-front #content .third-third {
   width: 260px;
@@ -1243,7 +1290,21 @@ a.user-register-link {
   line-height: 22px;
   font-size: 13px;
 }
-  font-size: 13px;
-
-
-
+.view-id-Tools {
+  position: relative;
+}
+.view-Tools .title,
+.sitemap-title {
+  position: absolute;
+  bottom: initial;
+  top: -97px;
+  margin-left: -25px;
+  margin-top:25px;
+}
+.page-sitemap #content .content {
+  position: relative;
+}
+.block-user {
+  color: #879075;
+  font-weight: bold;
+}

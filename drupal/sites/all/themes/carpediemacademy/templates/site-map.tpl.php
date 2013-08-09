@@ -72,17 +72,10 @@
  * @see zen_preprocess_node()
  * @see zen_process()
  */
- 
+
  if (!$is_front) {
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
-  <?php //print $user_picture; ?>
-<div id="subheadbox">
-    <div id="subheader">
-    <h2 class="title">Site Map</h2>
-    <?php print $node->field_subhead[0]['view'] ?></div>
-    <div id="headerimage"><img src="<?php print drupal_get_path('theme','carpediemacademy') ?>/images/grandcoulee.jpg"></div>
-  </div>
   <?php if ($unpublished): ?>
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
@@ -107,8 +100,11 @@
   <div class="content" id="subcontent">
 
     <div id="subbody">
-    <?php  
-    print $menus; ?>
+<h2 class="sitemap-title">
+    Site Map</h2>
+    <?php
+      print $menus;
+    ?>
     </div>
   </div>
 

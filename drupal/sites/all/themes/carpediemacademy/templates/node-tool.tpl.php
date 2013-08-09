@@ -72,14 +72,14 @@
  * @see zen_preprocess_node()
  * @see zen_process()
  */
- 
+
  if (!$is_front && !$teaser) {
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php //print $user_picture; ?>
 <div id="subheadbox">
     <div id="subheader">
-    <h2 class="title"><?php print $title; ?></h2>
+    <!-- <h2 class="title"><?php print $title; ?></h2> -->
     <?php print $node->field_subhead[0]['view'] ?></div>
     <div id="headerimage"><?php print $node->field_headimage[0]['view'] ?></div>
   </div>
@@ -107,7 +107,7 @@
   <div class="content" id="subcontent">
 
     <div id="subbody">
-    <?php 
+    <?php
     if (isset($node->content['field_url']) && !empty($node->content['field_url'])) {
     	print l($node->content['field_url']['field']['#children'], $node->content['field_url']['field']['#children']);
     }
@@ -124,11 +124,11 @@
 // dpm($node);
  ?>
  <a href="/<?php print $node->path ?>"><h2 class="title"><?php print $title; ?></h2></a>
-    
+
  <?php
   print $node->content['body']['#value'];
   //dpm($node);
- 
+
 
 	 print $links;
  } else {

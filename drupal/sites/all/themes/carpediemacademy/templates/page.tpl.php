@@ -160,29 +160,36 @@
     <div class="line-95"></div>
     <?php print $messages; ?>
     <div id="marquee" class="fullwidth">
-      <?php if ($tabs): ?>
-          <div class="tabs page-width"><?php print $tabs; ?></div>
-        <?php endif; ?>
       <?php print $marquee; ?>
     </div>
     <div id="content" class="fullwidth clearfix">
       <div class="line-95"></div>
       <div class="page-width bg clearfix">
+        <?php if ($tabs): ?>
+          <div class="tabs page-width"><?php print $tabs; ?></div>
+        <?php endif; ?>
+      <?php if ($sidebar_first || $sidebar_second) { ?>
         <div class="two-thirds">
-
+      <?php } ?>
         <?php print $content; ?>
          <?php if ($content_region) {
             print $content_region;
           }
           ?>
+      <?php if ($sidebar_first || $sidebar_second) { ?>
         </div>
         <div class="third-third">
+      <?php } ?>
+      <?php if ($sidebar_first) {
+        print $sidebar_first;
+      } ?>
 
-      <?php print $sidebar_first; ?>
-
-      <?php print $sidebar_second; ?>
-
+      <?php if ($sidebar_second) {
+        print $sidebar_second;
+      } ?>
+      <?php if ($sidebar_first || $sidebar_second) { ?>
         </div>
+      <?php } ?>
       </div>
     </div> <!-- /Content -->
     <div class="footer page-width">

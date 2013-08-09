@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$('.view-id-Hero .item-list ul').addClass('slides');
 	$('.view-id-Hero').flexslider({
     animation: "slide",
-    slideshowSpeed: 4000,
+    slideshowSpeed: 6000,
     controlNav: false,
     directionNav: false,
   });
@@ -10,21 +10,21 @@ $(document).ready(function() {
 
 
 	//Intros for tools
-	moveme = $('#block-block-5');
-	$('#block-block-5').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-5');
+	// $('#block-block-5').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-6');
-	$('#block-block-6').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-6');
+	// $('#block-block-6').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-7');
-	$('#block-block-7').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-7');
+	// $('#block-block-7').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-8');
-	$('#block-block-8').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-8');
+	// $('#block-block-8').remove();
+	// $('#subbody').prepend(moveme);
 
 	//Forum intro
 	forumintro = $('#block-block-9');
@@ -97,20 +97,20 @@ $(document).ready(function() {
 		$('.user-login-switch').removeClass("active");
 
 	}
-	function resizeIt() {
-		rheight = $('.region-sidebar-second').height();
-		lheight = $('.leftcolumn').height() - 145;
-		if (lheight > rheight || rheight == null) {
-			$('.region-sidebar-second').css("height", (lheight) + "px");
-		} else {
-			$('.leftcolumn').css("height",  lheight + "px");
-		}
-	}
-	resizeIt();
+	// function resizeIt() {
+	// 	rheight = $('.region-sidebar-second').height();
+	// 	lheight = $('.leftcolumn').height() - 145;
+	// 	if (lheight > rheight || rheight == null) {
+	// 		$('.region-sidebar-second').css("height", (lheight) + "px");
+	// 	} else {
+	// 		$('.leftcolumn').css("height",  lheight + "px");
+	// 	}
+	// }
+	// resizeIt();
 
-	moveme = $('.section-comment form');
-	//$('.section-comment form').remove();
-	$('.node #subbody').append(moveme);
+	// moveme = $('.section-comment form');
+	// //$('.section-comment form').remove();
+	// $('.node #subbody').append(moveme);
 
 
 	//$('.section-user.logged-in #content').prepend('<div id="subheadbox" style="margin-bottom:40px;"><div id="subheader"><h2 class="title">Welcome</h2></div><div id="headerimage"><img class="imagefield imagefield-field_headimage" width="439" height="109" alt="" src="http://www.carpediemwestacademy.org/sites/carpediemwestacademy.org/files/imagefield_default_images/columbia.jpg?1308602934"></div></div>');
@@ -122,9 +122,6 @@ $(document).ready(function() {
 		$('.tool-title').click(function(){
 			$(this).next().toggle('slow');
 			$(this).toggleClass('down');
-			setTimeout(function(){
-				adjustHeight();
-			}, 1000);
 		});
 
 
@@ -244,17 +241,17 @@ $(document).ready(function() {
 
 	setTimeout(mydotdotdot,(50));
 
-	function adjustHeight() {
-		rheight = $('.region-sidebar-second').height();
-		lheight = $('.leftcolumn').height() - 145;
-		if (lheight > rheight || rheight == null) {
-			$('.region-sidebar-second').css("height", (lheight) + "px");
-		} else {
-			$('.leftcolumn .section #content-area').css("height",  rheight + "px");
-			$('.leftcolumn #subcontent').css("height",  (rheight - 20) + "px");
-		}
-	}
+	// function adjustHeight() {
+	// 	rheight = $('.region-sidebar-second').height();
+	// 	lheight = $('.leftcolumn').height() - 145;
+	// 	if (lheight > rheight || rheight == null) {
+	// 		$('.region-sidebar-second').css("height", (lheight) + "px");
+	// 	} else {
+	// 		$('.leftcolumn .section #content-area').css("height",  rheight + "px");
+	// 		$('.leftcolumn #subcontent').css("height",  (rheight - 20) + "px");
+	// 	}
+	// }
 
-	adjustHeight();
+	// adjustHeight();
 
 });

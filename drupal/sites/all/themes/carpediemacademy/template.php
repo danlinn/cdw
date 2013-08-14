@@ -70,6 +70,7 @@ drupal_add_js("stLight.options({publisher:'eed0472e-e2bf-42c9-ad2e-e23c8cfa4b7a'
  */
 function carpediemacademy_theme(&$existing, $type, $theme, $path) {
   $hooks = zen_theme($existing, $type, $theme, $path);
+
   // Add your theme hooks like this:
   /*
   $hooks['hook_name_here'] = array( // Details go here );
@@ -208,7 +209,6 @@ function carpediemacademy_preprocess(&$vars, $hook) {
  */
 function carpediemacademy_preprocess_page(&$vars, $hook) {
 	$external_js = 'http://w.sharethis.com/button/buttons.js';
-
 }
 // */
 
@@ -226,17 +226,17 @@ function carpediemacademy_preprocess_node(&$vars, $hook) {
     $block = module_invoke('views', 'block', 'view', 'Tools-block_1');
     $vars['tool_block'] = "<h3>" . $block['subject']  . "</h3>" . $block['content'];
   }
-  if ($vars['title'] == "Webinars"){
-    if ($vars->logged_in) {
-      $block = module_invoke('block', 'block', 'view', 13);
-      $vars['webinar_text'] .= $block['content'];
-    } else {
-      $block = module_invoke('block', 'block', 'view', 14);
-      $vars['webinar_text'] = $block['content'];
-    }
-    $vars["webinars"] = views_embed_view('webinar_listings', 'block_1');
-    // dpm($vars["webinars"]);
-  }
+  // if ($vars['title'] == "Webinars"){
+  //   if ($vars->logged_in) {
+  //     $block = module_invoke('block', 'block', 'view', 13);
+  //     $vars['webinar_text'] .= $block['content'];
+  //   } else {
+  //     $block = module_invoke('block', 'block', 'view', 14);
+  //     $vars['webinar_text'] = $block['content'];
+  //   }
+  //   $vars["webinars"] = views_embed_view('webinar_listings', 'block_1');
+  //   // dpm($vars["webinars"]);
+  // }
 }
 // */
 function carpediemacademy_preprocess_forums(&$variables, $hook) {

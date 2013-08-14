@@ -7,76 +7,6 @@ function cda_content_types_content_default_fields() {
   $fields = array();
 
   // Exported field: field_headimage
-  $fields['blog-field_headimage'] = array(
-    'field_name' => 'field_headimage',
-    'type_name' => 'blog',
-    'display_settings' => array(
-      'weight' => '-4',
-      'parent' => '',
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'filefield',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'filefield',
-    'active' => '1',
-    'list_field' => '0',
-    'list_default' => 1,
-    'description_field' => '0',
-    'widget' => array(
-      'file_extensions' => 'png gif jpg jpeg',
-      'file_path' => '',
-      'progress_indicator' => 'bar',
-      'max_filesize_per_file' => '',
-      'max_filesize_per_node' => '',
-      'max_resolution' => '0',
-      'min_resolution' => '0',
-      'alt' => '',
-      'custom_alt' => 0,
-      'title' => '',
-      'custom_title' => 0,
-      'title_type' => 'textfield',
-      'default_image' => array(
-        'filename' => 'books.jpg',
-        'filepath' => 'sites/cda.carpediemwest.org/files/imagefield_default_images/books_0.jpg',
-        'filemime' => 'image/jpeg',
-        'source' => 'default_image_upload',
-        'destination' => 'sites/cda.carpediemwest.org/files/imagefield_default_images/books_0.jpg',
-        'filesize' => '53180',
-        'uid' => '1',
-        'status' => 1,
-        'timestamp' => 1304729911,
-        'fid' => '9',
-      ),
-      'use_default_image' => 1,
-      'label' => 'Header Image',
-      'weight' => '-4',
-      'description' => '',
-      'type' => 'imagefield_widget',
-      'module' => 'imagefield',
-    ),
-  );
-
-  // Exported field: field_headimage
   $fields['forum-field_headimage'] = array(
     'field_name' => 'field_headimage',
     'type_name' => 'forum',
@@ -844,13 +774,13 @@ analyst|Analyst',
     'field_name' => 'field_headimage',
     'type_name' => 'webinar',
     'display_settings' => array(
-      'weight' => '-4',
+      'weight' => '-1',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'image_plain',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(

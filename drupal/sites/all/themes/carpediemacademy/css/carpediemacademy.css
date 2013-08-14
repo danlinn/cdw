@@ -3,6 +3,7 @@ body {
   color: #879075;
   color: #333;
   background:url('../images/bglight.jpg') #0a0a0a no-repeat scroll center top;
+  font-size: 14px;
 }
 html body.img_assist {
   color: #879075;
@@ -341,10 +342,10 @@ h4.title {
   padding: 3px 7px;
 }
 .title {
-  font-family: 'StRydeThin', sans-serif;
+/*  font-family: 'StRydeThin', sans-serif;
   color:#FFF;
   text-decoration: none;
-  font-size:30px;
+  font-size:30px;*/
 }
 
 .page-blog a, .section-about a {
@@ -369,16 +370,34 @@ padding:10px;
   font-size: 13px;
   color:#ccc;
 }
-#block-views-webinar_listings-block_2 .title {
-  margin-left: 60px;
-}
+#block-views-webinar_listings-block_2 .title,
+.newsletter-signup .title,
+.newsletter-signup p,
 #block-views-webinar_listings-block_2 .view-content {
   margin-left: 60px;
+  line-height: 22px;
+}
+.newsletter-signup {
+  margin-top: 15px;
+}
+.newsletter-signup .sidebar-icon {
+  margin-left: -60px;
+}
+.newsletter-signup .content p:first-child {
+  margin-top: 0;
+}
+.sidebar a {
+  text-transform: uppercase;
+}
+.sidebar .block {
+  margin-bottom: 40px;
 }
 .sidebar .views-field-title a {
   font-weight: normal;
   color:#ccc;
+  text-transform: none;
 }
+
 #subbody {
 /*  width:610px;
   min-height:500px;*/
@@ -578,6 +597,7 @@ text-overflow: ellipsis;
 	}
   .upcoming-label {
     margin-left: 5px;
+    line-height: 22px;
   }
 li.tool {
 	list-style: none;
@@ -614,6 +634,12 @@ text-decoration: none;
 }
 .view-Tools .view-filters {
   width: 650px;
+}
+#block-menu-menu-header-menu.block.with-block-editing:hover div.edit
+#block-nice_menus-1.block.with-block-editing:hover div.edit {
+  display: none;
+  height: 0px;
+  width: 0px;
 }
 /*
 .views-exposed-widgets {
@@ -1247,7 +1273,8 @@ a.user-register-link {
 }
 .page-header-block .views-field-title,
 .view-Tools .title,
-.sitemap-title {
+.sitemap-title,
+.positioned-title .title {
   position: absolute;
   bottom: 25px;
   left: 25px;
@@ -1294,12 +1321,14 @@ a.user-register-link {
   position: relative;
 }
 .view-Tools .title,
-.sitemap-title {
+.sitemap-title,
+.positioned-title .title {
   position: absolute;
   bottom: initial;
-  top: -97px;
+  top: -118px;
   margin-left: -25px;
   margin-top:25px;
+  font-weight: normal;
 }
 .page-sitemap #content .content {
   position: relative;

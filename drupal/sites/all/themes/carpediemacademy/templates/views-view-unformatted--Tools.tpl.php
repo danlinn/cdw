@@ -6,7 +6,6 @@
  *
  * @ingroup views_templates
  */
-dpm(views_get_current_view());
 ?>
 
 <div id="subheadbox">

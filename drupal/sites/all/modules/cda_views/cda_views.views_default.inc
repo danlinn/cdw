@@ -650,6 +650,31 @@ function cda_views_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 1,
     ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'role',
@@ -666,7 +691,7 @@ function cda_views_views_default_views() {
   $handler->override_option('header_empty', 1);
   $handler->override_option('empty', '<div id="subheadbox">
     <div id="subheader">
-    
+
     <h2 class="title">No Tools Found</h2>
     </div>
     <div id="headerimage"></div>
@@ -811,6 +836,31 @@ Please try a different word or phrase.
       'relationship' => 'none',
       'reduce_duplicates' => 1,
     ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
   ));
   $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/guide-icon.png" class="tool-icon">');
   $handler->override_option('path', 'tools/guides');
@@ -932,6 +982,31 @@ Please try a different word or phrase.
       'limit' => TRUE,
       'vid' => '4',
       'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
       'table' => 'term_node',
       'field' => 'tid',
       'hierarchy' => 0,
@@ -1066,6 +1141,31 @@ Please try a different word or phrase.
       'relationship' => 'none',
       'reduce_duplicates' => 1,
     ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
   ));
   $handler->override_option('title', 'Training Tools');
   $handler->override_option('header', '<img src="/sites/all/themes/carpediemacademy/images/training-icon.png" class="tool-icon">');
@@ -1188,6 +1288,31 @@ Please try a different word or phrase.
       'limit' => TRUE,
       'vid' => '4',
       'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
       'table' => 'term_node',
       'field' => 'tid',
       'hierarchy' => 0,
@@ -1648,6 +1773,31 @@ Please try a different word or phrase.
       'relationship' => 'none',
       'reduce_duplicates' => 1,
     ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
   ));
   $handler->override_option('title', 'Related Tools');
   $handler->override_option('header', '');
@@ -1764,6 +1914,31 @@ Please try a different word or phrase.
       'relationship' => 'none',
       'reduce_duplicates' => 1,
     ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
   ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
@@ -1871,6 +2046,31 @@ Please try a different word or phrase.
       'limit' => TRUE,
       'vid' => '4',
       'id' => 'tid_2',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 1,
+    ),
+    'tid_3' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_3_op',
+        'identifier' => 'role',
+        'label' => 'Role',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '5',
+      'id' => 'tid_3',
       'table' => 'term_node',
       'field' => 'tid',
       'hierarchy' => 0,
@@ -2026,6 +2226,7 @@ Please try a different word or phrase.
         3 => 0,
         1 => 0,
         4 => 0,
+        5 => 0,
       ),
       'default_argument_user' => 0,
       'default_argument_fixed' => '',
@@ -2048,6 +2249,7 @@ Please try a different word or phrase.
         3 => 0,
         1 => 0,
         4 => 0,
+        5 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,
@@ -2067,11 +2269,11 @@ Please try a different word or phrase.
     'type' => 'none',
   ));
   $handler->override_option('empty', '<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
-      
+
   <div class="views-field-field-headimage-fid">
                 <span class="field-content"><img class="imagefield imagefield-field_headimage" width="439" height="109" alt="" src="http://test.carpediemwestacademy.org/sites/carpediemwestacademy.org/files/imagefield_default_images/columbia.jpg"></span>
   </div>
-  
+
   </div>');
   $handler->override_option('empty_format', '3');
   $handler = $view->new_display('block', 'Block', 'block_1');
@@ -2370,6 +2572,11 @@ Please try a different word or phrase.
       'table' => 'node',
       'field' => 'title',
     ),
+    'teaser' => array(
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+    ),
   ));
   $handler->override_option('filters', array(
     'type' => array(
@@ -2386,6 +2593,41 @@ Please try a different word or phrase.
       'id' => 'type',
       'table' => 'node',
       'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'field_webinar_date_value' => array(
+      'operator' => '<',
+      'value' => array(
+        'value' => array(
+          'date' => '',
+        ),
+        'min' => array(
+          'date' => '',
+        ),
+        'max' => array(
+          'date' => '',
+        ),
+        'default_date' => 'now',
+        'default_to_date' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'date_fields' => array(
+        'node_data_field_webinar_date.field_webinar_date_value' => 'node_data_field_webinar_date.field_webinar_date_value',
+      ),
+      'date_method' => 'OR',
+      'granularity' => 'day',
+      'form_type' => 'date_text',
+      'default_date' => 'now',
+      'default_to_date' => '',
+      'year_range' => '-3:+3',
+      'id' => 'field_webinar_date_value',
+      'table' => 'node_data_field_webinar_date',
+      'field' => 'field_webinar_date_value',
       'relationship' => 'none',
     ),
   ));
@@ -2541,6 +2783,42 @@ Please try a different word or phrase.
       ),
       'relationship' => 'none',
     ),
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => 'Register Now',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'text' => 'Register Now',
+      'exclude' => 0,
+      'id' => 'view_node',
+      'table' => 'node',
+      'field' => 'view_node',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('title', 'What\'s New!');
   $handler->override_option('header', '<span class="upcoming-label">Upcoming Webinar:</span>
@@ -2553,6 +2831,254 @@ Please try a different word or phrase.
     'hide_empty' => 0,
   ));
   $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Past Webinars - Auth', 'block_3');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'teaser' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'text' => 'Watch Webinar',
+      'exclude' => 0,
+      'id' => 'view_node',
+      'table' => 'node',
+      'field' => 'view_node',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'role',
+    'role' => array(
+      2 => 2,
+    ),
+  ));
+  $handler->override_option('header', '');
+  $handler->override_option('row_plugin', 'fields');
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 0,
+  ));
+  $handler->override_option('block_description', 'Past Webinars - Auth');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Past Webinars - Anon', 'block_4');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'teaser' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'nothing' => array(
+      'label' => '',
+      'alter' => array(
+        'text' => '<a href="/user/register">Register Now</a>',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'nothing',
+      'table' => 'views',
+      'field' => 'nothing',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'role',
+    'role' => array(
+      1 => 1,
+    ),
+  ));
+  $handler->override_option('header', '');
+  $handler->override_option('row_plugin', 'fields');
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 0,
+  ));
+  $handler->override_option('block_description', 'Past Webinars - Anon');
   $handler->override_option('block_caching', -1);
 
   $views[$view->name] = $view;

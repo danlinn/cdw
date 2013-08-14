@@ -171,11 +171,17 @@
       <?php if ($sidebar_first || $sidebar_second) { ?>
         <div class="two-thirds">
       <?php } ?>
+        <?php if ($content_top) {
+          print $content_top;
+          } ?>
         <?php print $content; ?>
          <?php if ($content_region) {
             print $content_region;
           }
           ?>
+          <?php if ($content_bottom) {
+          print $content_bottom;
+          } ?>
       <?php if ($sidebar_first || $sidebar_second) { ?>
         </div>
         <div class="third-third">

@@ -158,7 +158,7 @@
       </div>
     </div> <!-- /Header -->
     <div class="line-95"></div>
-    <?php print $messages; ?>
+    <div class="page-width"><?php print $messages; ?></div>
     <div id="marquee" class="fullwidth">
       <?php print $marquee; ?>
     </div>

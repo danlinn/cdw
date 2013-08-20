@@ -226,17 +226,26 @@ function carpediemacademy_preprocess_node(&$vars, $hook) {
     $block = module_invoke('views', 'block', 'view', 'Tools-block_1');
     $vars['tool_block'] = "<h3>" . $block['subject']  . "</h3>" . $block['content'];
   }
-  // if ($vars['title'] == "Webinars"){
-  //   if ($vars->logged_in) {
-  //     $block = module_invoke('block', 'block', 'view', 13);
-  //     $vars['webinar_text'] .= $block['content'];
-  //   } else {
-  //     $block = module_invoke('block', 'block', 'view', 14);
-  //     $vars['webinar_text'] = $block['content'];
-  //   }
-  //   $vars["webinars"] = views_embed_view('webinar_listings', 'block_1');
-  //   // dpm($vars["webinars"]);
-  // }
+  $webinar = ($vars['type'] == "webinar") ? TRUE : FALSE;
+  $tool = ($vars['type'] == "tool") ? TRUE : FALSE;
+  $anon = ($vars['logged_in'] == TRUE) ? FALSE : TRUE;
+  $current_page = ($_GET['q'] == 'node/' . $vars['nid']) ? TRUE : FALSE;
+  if (($webinar || $tool) && $anon && $current_page) {
+    if ($webinar) {
+      $webinar_date = date_convert($vars['node']->field_webinar_date[0]['value'], DATE_ISO, DATE_UNIX);
+      if($webinar_date < time() ) {
+        drupal_access_denied();
+        //logintoboggan_denied();
+        module_invoke_all('exit');
+        exit();
+      }
+    } else {
+      drupal_access_denied();
+      logintoboggan_denied();
+      module_invoke_all('exit');
+      exit();
+    }
+  }
 }
 // */
 function carpediemacademy_preprocess_forums(&$variables, $hook) {

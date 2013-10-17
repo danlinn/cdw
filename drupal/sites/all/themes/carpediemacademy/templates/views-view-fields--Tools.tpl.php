@@ -18,41 +18,40 @@
  *
  * @ingroup views_templates
  */
- //dpm(get_defined_vars());
 ?>
-<?php foreach ($fields as $id => $field): 
- 
+<?php foreach ($fields as $id => $field):
+
 	switch ($id) {
-		case "title" : 
+		case "title" :
 			$title = $field->content;
 		break;
-		case "body" : 
+		case "body" :
 			$body = $field->content;
 		break;
-		case "field_url_value" : 
+		case "field_url_value" :
 			$url = $field->content;
-		
+
 		break;
-		case "comment_count" : 
-		
+		case "comment_count" :
+
 					$commentcount = $field->content;
-		
+
 		break;
-		case "comments_link" : 
+		case "comments_link" :
  //dpm($field);
 
 			$commentlink = $field->content;
-		
+
 		break;
-		
+
 	}
- endforeach; 
+ endforeach;
 	?>
 <li class="tool">
 	<div class="tool-title"><?php print $title ?></div>
 	<div class="tool-container clearfix">
 		<div class="tool-body"><?php print $body ?></div>
 		<div class="tool-url"><?php print $url ?></div>
-		<div class="tool-links"><?php print $commentcount ?> | <?php print $commentlink ?></div>	
+		<div class="tool-links"><?php print $commentcount ?> | <?php print $commentlink ?></div>
 	</div>
-</li>		
+</li>

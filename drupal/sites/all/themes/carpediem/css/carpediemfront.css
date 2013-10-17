@@ -30,6 +30,7 @@ body {
 	font-family: 'Cuprum', arial, sans serif;
 	font-size:18px;
 	color:white;
+	white-space: nowrap;
 }
 
 .FrontPage #donate {
@@ -67,7 +68,7 @@ text-align:center;
 	}
 .FrontPage a {
 	color:FFF;
-}	
+}
 .FrontPage p {
 margin:0;
 }

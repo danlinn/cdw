@@ -70,6 +70,7 @@ drupal_add_js("stLight.options({publisher:'eed0472e-e2bf-42c9-ad2e-e23c8cfa4b7a'
  */
 function carpediemacademy_theme(&$existing, $type, $theme, $path) {
   $hooks = zen_theme($existing, $type, $theme, $path);
+
   // Add your theme hooks like this:
   /*
   $hooks['hook_name_here'] = array( // Details go here );
@@ -207,9 +208,7 @@ function carpediemacademy_preprocess(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function carpediemacademy_preprocess_page(&$vars, $hook) {
-	$vars['sample_variable'] = t('Lorem ipsum.');
 	$external_js = 'http://w.sharethis.com/button/buttons.js';
-
 }
 // */
 
@@ -221,15 +220,31 @@ function carpediemacademy_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function carpediemacademy_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
-
-  // Optionally, run node-type-specific preprocess functions, like
-  // carpediemacademy_preprocess_node_page() or carpediemacademy_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $vars['node']->type;
-  if (function_exists($function)) {
-    $function($vars, $hook);
+  $title = $vars['title'];
+  if (substr($title,0,5) == 'STAGE') {
+    $block = module_invoke('views', 'block', 'view', 'Tools-block_1');
+    $vars['tool_block'] = "<h3>" . $block['subject']  . "</h3>" . $block['content'];
+  }
+  $webinar = ($vars['type'] == "webinar") ? TRUE : FALSE;
+  $tool = ($vars['type'] == "tool") ? TRUE : FALSE;
+  $anon = ($vars['logged_in'] == TRUE) ? FALSE : TRUE;
+  $current_page = ($_GET['q'] == 'node/' . $vars['nid']) ? TRUE : FALSE;
+  if (($webinar || $tool) && $anon && $current_page) {
+    if ($webinar) {
+      $webinar_date = date_convert($vars['node']->field_webinar_date[0]['value'], DATE_ISO, DATE_UNIX);
+      if($webinar_date < time() ) {
+        drupal_access_denied();
+        //logintoboggan_denied();
+        module_invoke_all('exit');
+        exit();
+      }
+    } else {
+      drupal_access_denied();
+      logintoboggan_denied();
+      module_invoke_all('exit');
+      exit();
+    }
   }
 }
 // */
@@ -242,6 +257,12 @@ function carpediemacademy_preprocess_forums(&$variables, $hook) {
             )), 'html' => TRUE);
   }
 }
+
+function carpediemacademy_views_view_field($view, $field, $row) {
+  // dpm($row);
+  return $view->field[$field->options['id']]->advanced_render($row);
+}
+
 /**
  * Override or insert variables into the comment templates.
  *

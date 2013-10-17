@@ -53,6 +53,7 @@ conditional-stylesheets[if lte IE 7][all][] = css/ie7.css
   ; Optionally add some JavaScripts to your theme.
  scripts[] = js/cdw.js
  scripts[] = js/jquery.dotdotdot-1.3.0-packed.js
+ scripts[] = js/flexslider/jquery.flexslider-min.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
@@ -64,12 +65,16 @@ conditional-stylesheets[if lte IE 7][all][] = css/ie7.css
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
 regions[homeleft]       = Home Left
-regions[homeright]           = Home Right
+regions[homemid]        = Home Middle
+regions[homeright]      = Home Right
 regions[highlight]      = Highlighted content
+regions[marquee]        = Marquee
 regions[content_top]    = Content top
+regions[content_region] = Content
 regions[content_bottom] = Content bottom
 regions[header]         = Header
-regions[footer]         = Footer
+regions[footerleft]    = Footer Left
+regions[footerright]   = Footer Right
 regions[page_closure]   = Page closure
 regions[NavigationBar]  = Navigation Bar
 regions[ContentBox]     = Content Box

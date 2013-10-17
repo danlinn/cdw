@@ -1,0 +1,10 @@
+name = Splash
+description = Allows to show a splash page on first, daily or weekly visit.
+core = 6.x
+version = 6.x-2.x
+; Information added by drupal.org packaging script on 2012-08-07
+version = "6.x-2.9"
+core = "6.x"
+project = "splash"
+datestamp = "1344364642"
+

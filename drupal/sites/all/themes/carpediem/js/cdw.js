@@ -1,37 +1,46 @@
 $(document).ready(
 		function () {
 		  if($('#edit-taxonomy-1').get(0)) {
+        switchHeaderPic($('#edit-taxonomy-1')[0][$('#edit-taxonomy-1').get(0).selectedIndex]);
 			  $('#edit-taxonomy-1').change(function() {
-			    switchHeaderPic(this.selectedIndex);
+			    switchHeaderPic($('#edit-taxonomy-1')[0][$('#edit-taxonomy-1').get(0).selectedIndex]);
 			  });
-			  switchHeaderPic($('#edit-taxonomy-1').get(0).selectedIndex);
 		  }
 		}
 	);
-function switchHeaderPic(sel) {
+function switchHeaderPic(item) {
 $('#sampleHeaderPic').remove();
-  switch(sel) {
-    case 2:
+switch(item.innerHTML) {
+    case "Blog":
+      img = "admin";
+      break;
+    case "Contact":
       img = "contact";
       break;
-    case 3:
+    case "Now":
       img = "now";
       break;
-    case 4:
+    case "The Network":
       img = "network";
       break;
-    case 5:
+    case "Reports":
       img = "reports";
       break;
-    case 6:
+    case "What We Do":
       img = "what-we-do";
       break;
-    case 7:
+    case "Who We Are":
       img = "who-we-are";
+      break;
+    case "Who We Are":
+      img = "who-we-are";
+      break;
+    case "New Visions":
+      img = "new-visions";
       break;
     default:
       img = "admin";
       break;
   }
-  $('#edit-taxonomy-1').after('<img id="sampleHeaderPic" width="328" height="62" align="middle" src="/sites/carpediemwest.org/files/headers/header_' + img + '.jpg">');
+  $('#edit-taxonomy-1').after('<img id="sampleHeaderPic" width="328" height="62" align="middle" src="/sites/all/themes/carpediem/images/headers/header_' + img + '.jpg">');
 }

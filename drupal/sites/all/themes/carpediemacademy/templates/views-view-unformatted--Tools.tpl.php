@@ -10,7 +10,7 @@
 
 <div id="subheadbox">
     <div id="subheader">
-    <?php     
+    <?php
     $displayName = $view->current_display;
     $title = $view->display[$displayName]->display_options['title'];
 

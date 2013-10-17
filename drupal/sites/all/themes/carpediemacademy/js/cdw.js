@@ -1,22 +1,30 @@
 $(document).ready(function() {
+	$('.view-id-Hero .item-list ul').addClass('slides');
+	$('.view-id-Hero').flexslider({
+    animation: "slide",
+    slideshowSpeed: 6000,
+    controlNav: false,
+    directionNav: false,
+  });
+
+
 
 	//Intros for tools
+	// moveme = $('#block-block-5');
+	// $('#block-block-5').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-5');
-	$('#block-block-5').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-6');
+	// $('#block-block-6').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-6');
-	$('#block-block-6').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-7');
+	// $('#block-block-7').remove();
+	// $('#subbody').prepend(moveme);
 
-	moveme = $('#block-block-7');
-	$('#block-block-7').remove();
-	$('#subbody').prepend(moveme);
-
-	moveme = $('#block-block-8');
-	$('#block-block-8').remove();
-	$('#subbody').prepend(moveme);
+	// moveme = $('#block-block-8');
+	// $('#block-block-8').remove();
+	// $('#subbody').prepend(moveme);
 
 	//Forum intro
 	forumintro = $('#block-block-9');
@@ -52,8 +60,15 @@ $(document).ready(function() {
 	//User login box
 	userlogin = document.createElement("a");
 	$(userlogin).addClass("user-login-switch");
-	$(userlogin).text("login");
+	$(userlogin).text("Log-in");
 
+	//Register link
+	reglogin = document.createElement("a");
+	$(reglogin).addClass("user-register-link");
+	$(reglogin).attr("href",'/user/register');
+	$(reglogin).text("Register");
+
+	$('.block-user').before(reglogin);
 	$('.block-user').before(userlogin);
 	$(".user-login-switch").click(function(){
 		$('.block-user').toggle();
@@ -77,25 +92,25 @@ $(document).ready(function() {
 
 	function userOff() {
 		$('.white-hover').remove();
-		$(userlogin).text("login");
+		$(userlogin).text("Log-in");
 		$('.block-user').hide();
 		$('.user-login-switch').removeClass("active");
 
 	}
-	function resizeIt() {
-		rheight = $('.region-sidebar-second').height();
-		lheight = $('.leftcolumn').height() - 145;
-		if (lheight > rheight || rheight == null) {
-			$('.region-sidebar-second').css("height", (lheight) + "px");
-		} else {
-			$('.leftcolumn').css("height",  lheight + "px");
-		}
-	}
-	resizeIt();
+	// function resizeIt() {
+	// 	rheight = $('.region-sidebar-second').height();
+	// 	lheight = $('.leftcolumn').height() - 145;
+	// 	if (lheight > rheight || rheight == null) {
+	// 		$('.region-sidebar-second').css("height", (lheight) + "px");
+	// 	} else {
+	// 		$('.leftcolumn').css("height",  lheight + "px");
+	// 	}
+	// }
+	// resizeIt();
 
-	moveme = $('.section-comment form');
-	//$('.section-comment form').remove();
-	$('.node #subbody').append(moveme);
+	// moveme = $('.section-comment form');
+	// //$('.section-comment form').remove();
+	// $('.node #subbody').append(moveme);
 
 
 	//$('.section-user.logged-in #content').prepend('<div id="subheadbox" style="margin-bottom:40px;"><div id="subheader"><h2 class="title">Welcome</h2></div><div id="headerimage"><img class="imagefield imagefield-field_headimage" width="439" height="109" alt="" src="http://www.carpediemwestacademy.org/sites/carpediemwestacademy.org/files/imagefield_default_images/columbia.jpg?1308602934"></div></div>');
@@ -107,10 +122,8 @@ $(document).ready(function() {
 		$('.tool-title').click(function(){
 			$(this).next().toggle('slow');
 			$(this).toggleClass('down');
-			setTimeout(function(){
-				adjustHeight();
-			}, 1000);
 		});
+
 
 	expandall = document.createElement('a');
 	$(expandall).text('expand all').addClass("expandlink").click(function(){
@@ -132,7 +145,11 @@ $(document).ready(function() {
 			}, 1000);
 		}
 	});
-	$('#subbody .views-row-1').before(expandall);
+	if ($('.view-Tools #subbody .views-row-1').length > 0) {
+		$('.view-Tools #subbody .views-row-1').before(expandall);
+	} else {
+		$('.view-Tools .views-row-1').before(expandall);
+	}
 
 	//Change forum link text
 	$('.topic-next').text("Next Topic >");
@@ -151,7 +168,8 @@ $(document).ready(function() {
 	userlink = document.createElement("a");
 	$(userlink).attr("href","/user");
 	$(userlink).text(newtext);
-	$('#block-logintoboggan-0 .content').html(userlink).append("&nbsp;|&nbsp;").append(link);
+	$('#block-logintoboggan-0 .content').html(userlink).append(link);
+	$('#block-logintoboggan-0 .content a').wrap('<li>');
 
 
 	//Tool of the month image
@@ -223,17 +241,17 @@ $(document).ready(function() {
 
 	setTimeout(mydotdotdot,(50));
 
-	function adjustHeight() {
-		rheight = $('.region-sidebar-second').height();
-		lheight = $('.leftcolumn').height() - 145;
-		if (lheight > rheight || rheight == null) {
-			$('.region-sidebar-second').css("height", (lheight) + "px");
-		} else {
-			$('.leftcolumn .section #content-area').css("height",  rheight + "px");
-			$('.leftcolumn #subcontent').css("height",  (rheight - 20) + "px");
-		}
-	}
+	// function adjustHeight() {
+	// 	rheight = $('.region-sidebar-second').height();
+	// 	lheight = $('.leftcolumn').height() - 145;
+	// 	if (lheight > rheight || rheight == null) {
+	// 		$('.region-sidebar-second').css("height", (lheight) + "px");
+	// 	} else {
+	// 		$('.leftcolumn .section #content-area').css("height",  rheight + "px");
+	// 		$('.leftcolumn #subcontent').css("height",  (rheight - 20) + "px");
+	// 	}
+	// }
 
-	adjustHeight();
+	// adjustHeight();
 
 });

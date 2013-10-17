@@ -90,3 +90,7 @@
 
 #block-user-3 /* "Who's online" block for a list of the online users */ {
 }
+#block-block-17 p {
+  margin:0;
+  padding:0;
+}

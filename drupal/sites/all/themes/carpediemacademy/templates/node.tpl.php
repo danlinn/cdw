@@ -103,7 +103,19 @@
 <h2 class="subhead">
     <?php
     print $node->field_subhead[0]['value'] ?></h2>
-    <?php  print $node->content['body']['#value'];
+    <?php
+    if (isset($node->field_webinar_date) && !empty($node->field_webinar_date)) {
+      $webtime = "<br>" . $node->field_webinar_time[0]['value'];
+    } else {
+      $webtime = "";
+    }
+    if (strtotime($node->field_webinar_date[0]['value']) >= strtotime(date("c"))) {
+      print "Airs: <br>" . $node->field_webinar_date[0]['view'] . $webtime;
+    } else {
+      print "Aired: <br>" . $node->field_webinar_date[0]['view'] . $webtime;
+    }
+      // print $node->field_webinar_date[0]['view'];
+    print $node->content['body']['#value'];
       print $node->content['webform']['#value'];
       print $webinar_text;
       print $webinars;

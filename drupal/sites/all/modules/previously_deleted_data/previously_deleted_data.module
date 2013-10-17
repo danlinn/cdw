@@ -1,0 +1,3 @@
+<?php
+
+include_once('previously_deleted_data.features.inc');

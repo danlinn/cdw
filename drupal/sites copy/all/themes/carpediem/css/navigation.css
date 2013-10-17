@@ -1,0 +1,60 @@
+/* $Id: navigation.css,v 1.5 2009/11/04 19:42:41 johnalbin Exp $ */
+
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #000;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {
+}
+
+.region-navigation {
+}
+
+/*
+ * Primary and Secondary menu links
+ */
+#main-menu {
+	margin:0 0 0 62px;
+	padding:12px 3px 9px 9px;
+	font-size:10px;
+	font-family: 'Cuprum', verdana, arial, sans serif;
+	text-decoration:none;
+}
+#main-menu a {
+	font-family: 'Cuprum', arial, sans serif;
+	text-decoration:none;
+	/*font-style:italic;*/
+}
+#main-menu li.first  {
+display:none;
+}
+#main-menu li  {
+margin-right:9px;
+}
+
+#secondary-menu {
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks. See http://drupal.org/project/menu_block
+ */
+.block-menu_block {
+}

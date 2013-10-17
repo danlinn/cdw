@@ -57,6 +57,7 @@ float: left;
 	font-family: 'Cuprum', arial, sans serif;
 	font-size:18px;
 	color:white;
+  white-space: nowrap;
 }
 
 .FrontPage #donate {
@@ -453,7 +454,7 @@ ul.nice-menu ul,
 }
 
 ul.nice-menu ul li {
-  width: 12.5em;
+  width: 100%;
 }
 .mceContentBody  {
 	background-color:#FFFFFF;

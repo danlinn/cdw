@@ -158,7 +158,7 @@
   </div>
    <?php if ($primary_links || $navigation): ?>
   <div id="navigation">
-<!-- <div id="donate"><a href="donate"><img src="<?php print $directory; ?>/images/donate.gif" border="0" alt="Donate to Carpe Diem" /></a></div> -->
+  <div id="donate"><a href="donate"><img src="<?php print $directory; ?>/images/donatetrans.png" border="0" alt="Donate to Carpe Diem" /></a></div>
    <?php
    // print theme(array('links__system_main_menu', 'links'), $primary_links,
 //            array(

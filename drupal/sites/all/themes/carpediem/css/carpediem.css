@@ -434,6 +434,7 @@ ul.nice-menu li:hover {
   padding: 10px 18px;
   text-decoration:none;
   color:white;
+  white-space: nowrap;
 /*   color:#3a4e6c; */
 }
 
@@ -451,6 +452,7 @@ ul.nice-menu ul,
 /* Override for Garland header. */
 #header-region ul.nice-menu ul {
   top: 1.7em;
+
 }
 
 ul.nice-menu ul li {
@@ -638,3 +640,22 @@ background: none;
   border-bottom: 1px dashed #4b637f;
   padding-bottom: 20px;
 }
+
+#block-block-21 {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.subPages #block-block-21 {
+  top: 0px;
+}
+
+#block-block-21 .edit {
+  display: none;
+}
+
+#block-block-21 a {
+  color:#fff;
+  font-size: 15px;
+}
+

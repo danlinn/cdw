@@ -109,9 +109,9 @@
     } else {
       $webtime = "";
     }
-    if (strtotime($node->field_webinar_date[0]['value']) >= strtotime(date("c"))) {
+    if (isset($node->field_webinar_date) && strtotime($node->field_webinar_date[0]['value']) >= strtotime(date("c"))) {
       print "Airs: <br>" . $node->field_webinar_date[0]['view'] . $webtime;
-    } else {
+    } else if (isset($node->field_webinar_date)) {
       print "Aired: <br>" . $node->field_webinar_date[0]['view'] . $webtime;
     }
       // print $node->field_webinar_date[0]['view'];

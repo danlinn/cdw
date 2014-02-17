@@ -1,0 +1,5 @@
+name = AYAH
+description = Are You A Human is a dynamic, ever changing interactive experience that stops spammers in their tracks.
+package = AYAH
+core = 6.x
+version = "6.x-1.x-dev"

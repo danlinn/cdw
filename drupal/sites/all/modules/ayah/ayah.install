@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the AYAH module.
+ */
+
+
+/**
+ * Implementation of hook_schema().
+ */
+function ayah_schema() {
+  // Table for positions of the challenge.
+  $schema['ayah_forms'] = array(
+    'description' => 'This table describes which forms should have the AYAH game on.',
+    'fields' => array(
+      'form_id' => array(
+        'description' => 'The form_id of the form to add the game to.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+	  'add_game' => array(
+	    'description' => 'Add game to this form.',
+	    'type' => 'int',
+	    'not null' => TRUE,
+        'default' => 0,
+	  ),
+    ),
+    'primary key' => array('form_id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function ayah_install() {
+  $t = get_t();
+  drupal_install_schema('ayah');
+
+  // Insert some default AYAH forms.
+  $form_ids = array(
+    'comment_form',
+    'contact_mail_user', 'contact_mail_page',
+    'user_register', 'user_pass', 'user_login', 'user_login_block',
+    'forum_node_form'
+  );
+  foreach ($form_ids as $form_id) {
+    db_query("INSERT INTO {ayah_forms} (form_id) VALUES ('%s')", $form_id);
+  }
+
+  // Be friendly to your users: what to do after install?
+  drupal_set_message($t('You can now <a href="!ayah_admin">configure the AYAH module</a> for your site.',
+    array('!ayah_admin' => url('admin/user/ayah'))), 'status');
+
+  // Explain to users that page caching may be disabled.
+  if (variable_get('cache', CACHE_DISABLED) != CACHE_DISABLED) {
+    drupal_set_message($t('Note that the AYAH module disables <a href="!performance_admin">page caching</a> of pages that include a AYAH game.',
+      array('!performance_admin' => url('admin/settings/performance'))), 'warning');
+  }
+
+  // TODO
+  // CHECK FOR CURL
+  // ALSO CHECK FOR CURL WHEN WE SAVE THE CONFIGURATION
+
+
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ayah_uninstall() {
+  drupal_uninstall_schema('ayah');
+  db_query("DELETE FROM {variable} WHERE name LIKE 'ayah_%'");
+  cache_clear_all('variables', 'cache');
+}

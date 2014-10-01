@@ -230,22 +230,22 @@ function carpediemacademy_preprocess_node(&$vars, $hook) {
   $tool = ($vars['type'] == "tool") ? TRUE : FALSE;
   $anon = ($vars['logged_in'] == TRUE) ? FALSE : TRUE;
   $current_page = ($_GET['q'] == 'node/' . $vars['nid']) ? TRUE : FALSE;
-  if (($webinar || $tool) && $anon && $current_page) {
-    if ($webinar) {
-      $webinar_date = date_convert($vars['node']->field_webinar_date[0]['value'], DATE_ISO, DATE_UNIX);
-      if($webinar_date < time() ) {
-        drupal_access_denied();
-        //logintoboggan_denied();
-        module_invoke_all('exit');
-        exit();
-      }
-    } else {
-      drupal_access_denied();
-      logintoboggan_denied();
-      module_invoke_all('exit');
-      exit();
-    }
-  }
+  // if (($webinar || $tool) && $anon && $current_page) {
+  //   if ($webinar) {
+  //     $webinar_date = date_convert($vars['node']->field_webinar_date[0]['value'], DATE_ISO, DATE_UNIX);
+  //     if($webinar_date < time() ) {
+  //       drupal_access_denied();
+  //       //logintoboggan_denied();
+  //       module_invoke_all('exit');
+  //       exit();
+  //     }
+  //   } else {
+  //     drupal_access_denied();
+  //     logintoboggan_denied();
+  //     module_invoke_all('exit');
+  //     exit();
+  //   }
+  // }
 }
 // */
 function carpediemacademy_preprocess_forums(&$variables, $hook) {

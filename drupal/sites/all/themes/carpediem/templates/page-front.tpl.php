@@ -249,6 +249,13 @@
         <a href="https://twitter.com/#!/carpediemwest" target="_blank" class="twitter-icon">
           <img src="/sites/all/themes/carpediem/images/twitter.png" />
         </a>
+      <div class="linked_button">
+        <script src="//platform.linkedin.com/in.js" type="text/javascript">
+  lang: en_US
+</script>
+<script type="IN/FollowCompany" data-id="2422272" data-counter="none"></script>
+
+      </div>
       </div>
     </div>
 

@@ -3,12 +3,15 @@
 
 body {
 	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #342d25;
+  background: #fff;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #000000;
   -webkit-font-smoothing: antialiased;
+}
+body.not-front {
+  background: #342d25;
 }
 a {
   text-decoration:none;
@@ -37,7 +40,7 @@ float: left;
   position:absolute;
 }
 .FrontPage a {
-	color:#89b4f9;
+	color:#4cb8f9;
 	}
 .FrontPage #header {
 	background-image:url(../images/homeheaderbg.jpg);
@@ -658,4 +661,11 @@ background: none;
   color:#fff;
   font-size: 15px;
 }
+.inline-left .image {
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
 
+.linked_button {
+  padding: 40px 0px 0px 71px;
+}

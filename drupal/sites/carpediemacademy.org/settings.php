@@ -91,7 +91,7 @@
  *   $db_url = 'pgsql://username:password@localhost/databasename';
  */
 //$db_url = 'mysql://carpediemadmin:C4rp3D!3m@h50mysql117.secureserver.net/carpediemadmin';
-$db_url = 'mysql://carpediemadmin:C4rp3D!3m@localhost/carpediemadmin_local';
+$db_url = 'mysqli://carpediemadmin:carpediemadmin@localhost/carpediemadmin';
 //$db_prefix = '';
 
 /**
